@@ -1,0 +1,5 @@
+E:\Universidad\Octavo\Desarrollo_IV\Proyecto_Final\Servicios_Rest\Entidades\bin\Debug\Entidades.dll
+E:\Universidad\Octavo\Desarrollo_IV\Proyecto_Final\Servicios_Rest\Entidades\bin\Debug\Entidades.pdb
+E:\Universidad\Octavo\Desarrollo_IV\Proyecto_Final\Servicios_Rest\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+E:\Universidad\Octavo\Desarrollo_IV\Proyecto_Final\Servicios_Rest\Entidades\obj\Debug\Entidades.dll
+E:\Universidad\Octavo\Desarrollo_IV\Proyecto_Final\Servicios_Rest\Entidades\obj\Debug\Entidades.pdb
