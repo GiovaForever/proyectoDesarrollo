@@ -1,0 +1,27 @@
+﻿* {
+    padding: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+}
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../Imagenes/fondo_claro.jpg);
+    color: white;
+}
+
+nav {
+    height: 50px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.estiloIngreso {
+    color: black;
+    font-size: 14px;
+    border-radius: 7px 7px 7px 7px;
+    background-color: white;
+    font-weight: bold;
+}
