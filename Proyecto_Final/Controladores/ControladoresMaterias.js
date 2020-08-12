@@ -320,7 +320,7 @@ function isLetter(character) {
     }
 }
 
-//Código Cargar Productos
+//Código Cargar Docentes
 function cargarTablaDocentes() {
 
     var table = $('#tbl_Docentes').DataTable();
