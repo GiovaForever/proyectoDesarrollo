@@ -117,6 +117,7 @@
     <Content Include="Imagenes\banner.jpeg" />
     <Content Include="Imagenes\fondo_claro.jpg" />
     <Content Include="Index.aspx" />
+    <Content Include="Prestamos_Estudiantes.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -291,6 +292,13 @@
     </Compile>
     <Compile Include="Pagina_Principal.Master.designer.cs">
       <DependentUpon>Pagina_Principal.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Prestamos_Estudiantes.aspx.cs">
+      <DependentUpon>Prestamos_Estudiantes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Prestamos_Estudiantes.aspx.designer.cs">
+      <DependentUpon>Prestamos_Estudiantes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

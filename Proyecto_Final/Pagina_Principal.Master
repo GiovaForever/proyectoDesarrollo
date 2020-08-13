@@ -26,14 +26,15 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="Gestion_Estudiantes.aspx">Estudiantes</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="Gestion_Docentes.aspx">Docentes</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="Gestion_Laboratoristas.aspx">Laboratoristas</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdownUser" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Usuarios
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownUser">
+                                    <a class="dropdown-item" href="Gestion_Estudiantes.aspx">Estudiantes</a>
+                                    <a class="dropdown-item" href="Gestion_Docentes.aspx">Docentes</a>
+                                    <a class="dropdown-item" href="Gestion_Laboratoristas.aspx">Laboratoristas</a>
+                                    <a class="dropdown-item" href="Gestion_Invitados.aspx">Invitados</a>
+                                </div>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="Gestion_Laboratorios.aspx">Laboratorios</a>
@@ -42,16 +43,13 @@
                                 <a class="nav-link" href="Gestion_Materias.aspx">Materias</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="Gestion_Invitados.aspx">Invitados</a>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-link" href="Gestion_Inventarios.aspx">Inventario</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Prestamos
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">Estudiantes</a>
+                                    <a class="dropdown-item" href="Prestamos_Estudiantes.aspx">Estudiantes</a>
                                     <a class="dropdown-item" href="#">Docentes</a>
                                     <a class="dropdown-item" href="#">Invitados</a>
                                 </div>
