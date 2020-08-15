@@ -219,6 +219,11 @@
     <Compile Include="Controllers\EstudiantesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InventariosController.cs" />
+    <Compile Include="Controllers\PrestamosEstudiantesController.cs" />
+    <Compile Include="Models\DatosDetallePrestamosEst.cs" />
+    <Compile Include="Models\DatosPrestamoEstudiante.cs" />
+    <Compile Include="Models\DetallePrestamo.cs" />
+    <Compile Include="Models\DetPrestEstudianteDAL.cs" />
     <Compile Include="Models\Inventario.cs" />
     <Compile Include="Controllers\InvitadosController.cs" />
     <Compile Include="Controllers\LaboratoriosController.cs" />
@@ -244,10 +249,13 @@
     <Compile Include="Models\LaboratoriosDAL.cs" />
     <Compile Include="Models\Laboratorista.cs" />
     <Compile Include="Models\LaboratoristasDAL.cs" />
+    <Compile Include="Models\MasPrestEstudianteDAL.cs" />
     <Compile Include="Models\Materia.cs" />
     <Compile Include="Models\MateriasDAL.cs" />
+    <Compile Include="Models\PrestamoUsuario.cs" />
     <Compile Include="Models\TipoLaboratorio.cs" />
     <Compile Include="Models\TipoLaboratoriosDAL.cs" />
+    <Compile Include="Models\valuesDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

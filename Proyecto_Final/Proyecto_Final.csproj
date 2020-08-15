@@ -97,15 +97,18 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Controladores\ControladoresDevolucionEstudiantes.js" />
     <Content Include="Controladores\ControladoresDocentes.js" />
     <Content Include="Controladores\ControladoresInventarios.js" />
     <Content Include="Controladores\ControladoresInvitados.js" />
     <Content Include="Controladores\ControladoresLaboratorios.js" />
     <Content Include="Controladores\ControladoresMaterias.js" />
+    <Content Include="Controladores\ControladoresPrestamosEstudiantes.js" />
     <Content Include="Controladores\ControladorEstudiantes.js" />
     <Content Include="Controladores\ControladorLaboratoristas.js" />
     <Content Include="DataTable\jquery.dataTables.min.css" />
     <Content Include="DataTable\jquery.dataTables.min.js" />
+    <Content Include="Devolucion_Prestamo_Estudiante.aspx" />
     <Content Include="Estilos\Estilos.css" />
     <Content Include="Gestion_Docentes.aspx" />
     <Content Include="Gestion_Estudiantes.aspx" />
@@ -230,6 +233,13 @@
     <Content Include="Scripts\popper-utils.js.map" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Devolucion_Prestamo_Estudiante.aspx.cs">
+      <DependentUpon>Devolucion_Prestamo_Estudiante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Devolucion_Prestamo_Estudiante.aspx.designer.cs">
+      <DependentUpon>Devolucion_Prestamo_Estudiante.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Gestion_Docentes.aspx.cs">
       <DependentUpon>Gestion_Docentes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

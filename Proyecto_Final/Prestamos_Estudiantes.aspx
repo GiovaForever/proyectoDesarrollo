@@ -7,7 +7,7 @@
     <script src="Scripts/bootstrap.min.js"></script>
     <link rel="stylesheet" href="DataTable/jquery.dataTables.min.css" />
     <script src="DataTable/jquery.dataTables.min.js"></script>
-    <%--<script src="Controladores/ControladoresDocentes.js"></script>--%>
+    <script src="Controladores/ControladoresPrestamosEstudiantes.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="row container">
@@ -15,7 +15,7 @@
     </div>
     <div class="container form-inline">
         <label class="control-label">N°:  </label>
-        <input type="text" id="txtNumeroPrestamo" name="txtNumeroPrestamo" class="form-control mx-2 my-2" readonly/>
+        <input type="text" id="txtNumeroPrestamo" name="txtNumeroPrestamo" class="form-control mx-2 my-2" readonly />
     </div>
     <div class="container form-inline">
         <label class="control-label">Fecha:</label>
@@ -39,7 +39,7 @@
                             <input type="text" id="txtCedulaLaboratorista" name="txtCedulaLaboratorista" class="form-control" readonly placeholder="Cédula" />
                         </td>
                         <td rowspan="2" style="text-align: center">
-                            <button id="btnBuscarLaboratorista" type="button" class=" btn btn-info " data-toggle="modal" data-target="#ModalLaboratorista">
+                            <button id="btnBuscarLaboratorista" type="button" class=" btn btn-dark" data-toggle="modal" data-target="#ModalLaboratorista">
                                 Buscar
                             </button>
                         </td>
@@ -59,7 +59,7 @@
                             <input type="text" id="txtCedulaEstudiante" name="txtCedulaEstudiante" class="form-control" readonly placeholder="Cédula" />
                         </td>
                         <td rowspan="2" style="text-align: center">
-                            <button id="btnBuscarEstudiante" type="button" class=" btn btn-info " data-toggle="modal" data-target="#ModalEstudiante">
+                            <button id="btnBuscarEstudiante" type="button" class=" btn btn-dark" data-toggle="modal" data-target="#ModalEstudiante">
                                 Buscar
                             </button>
                         </td>
@@ -71,11 +71,6 @@
                     </tr>
                 </table>
             </div>
-            <%--<div class="form-group">
-                <input type="button" value="Guardar" class="btn btn-primary" id="btnGuardar" />
-                <input type="button" value="Limpiar" class="btn btn-warning" id="btnLimpiar" />
-                <input type="text" id="txtId" name="txtId" style="opacity: 0; width: 5px" />
-            </div>--%>
         </div>
         <div class="col-sm-5 mx-5">
             <div class="form-group">
@@ -94,7 +89,7 @@
                             <input type="text" id="txtCategoria" name="txtCategoria" class="form-control" readonly placeholder="Categoria" />
                         </td>
                         <td rowspan="2" style="text-align: center">
-                            <button id="btnInventario" type="button" class=" btn btn-info " data-toggle="modal" data-target="#ModalInventario" tabindex="1">
+                            <button id="btnBuscarInventario" type="button" class=" btn btn-dark" data-toggle="modal" data-target="#ModalInventario" tabindex="1">
                                 Buscar
                             </button>
                         </td>
@@ -106,18 +101,39 @@
                     </tr>
                     <tr>
                         <td>
-                            <input type="text" id="txtCantidad" name="txtCantidad" class="form-control my-2" placeholder="0" onkeypress="isNumber(event)" maxlength="2" />
+                            <input type="text" id="txtCantidad" name="txtCantidad" class="form-control my-2" placeholder="0" maxlength="2" />
                         </td>
                     </tr>
                 </table>
                 <div class="form-group">
-                    <input type="button" value="Agregar" class="btn btn-primary" id="btnGuardar" />
-                    <input type="button" value="Eliminar" class="btn btn-warning" id="btnEliminar" />
-                    <input type="text" id="txtId" name="txtId" style="opacity: 1; width: 5px" />
-                    <input type="text" id="txtCantExis" name="txtCantExis" style="opacity: 1; width: 5px" />
+                    <input type="button" value="Agregar" class="btn btn-primary" id="btnAgregar" />
+                    <input type="text" id="txtId" name="txtId" style="opacity: 1; width: 30px" />
+                    <input type="text" id="txtCantExis" name="txtCantExis" style="opacity: 1; width: 30px" />
                 </div>
             </div>
         </div>
+    </div>
+    <div class="container my-2">
+        <center>
+            <table id="tbl_Detalle" class="table table-bordered  table-striped bg-white" style="width: 90%">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Código</th>
+                        <th>Nombre</th>
+                        <th>Categoria</th>
+                        <th>Cantidad</th>
+                    </tr>
+                </thead>
+                <tbody class="tbl_body_table">
+                    <!-- Cargar De Datos Por Ajax -->
+                </tbody>
+            </table>
+        </center>
+    </div>
+    <div class="container my-2">
+        <center>
+            <input type="button" value="Guardar" class="btn btn-success" id="btnGuardar" />
+        </center>
     </div>
     <!-- Modal Laboratoristas-->
     <div class="modal fade" id="ModalLaboratorista" tabindex="-1" role="dialog" aria-labelledby="ModalLaboratoristaLabel" aria-hidden="true">
@@ -190,7 +206,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <table id="tbl_Inventario" class="table table-bordered" align="center">
+                    <table id="tbl_Inventario" class="table table-bordered" align="center" style="width:100%">
                         <thead class="thead-dark">
                             <tr>
                                 <th>Id</th>

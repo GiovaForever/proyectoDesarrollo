@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Servicios_Rest.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -9,31 +10,48 @@ namespace Servicios_Rest.Controllers
 {
     public class ValuesController : ApiController
     {
-        // GET api/values
-        public IEnumerable<string> Get()
+
+        valuesDAL values;
+
+        public ValuesController()
         {
-            return new string[] { "value1", "value2" };
+            values = new valuesDAL();
         }
 
-        // GET api/values/5
-        public string Get(int id)
+        [HttpGet]
+        [Route("api/values/date")]
+        public IHttpActionResult GetDate()
         {
-            return "value";
+
+            List<string> lstResult = values.GetFechaPrestamo();
+
+            if (lstResult[0].Equals("Error"))
+            {
+                return Content(HttpStatusCode.NotFound, lstResult[1]);
+            }
+            else
+            {
+                return Content(HttpStatusCode.OK,lstResult[1]);
+            }
+
         }
 
-        // POST api/values
-        public void Post([FromBody]string value)
+        [HttpGet]
+        [Route("api/values/prestamoEstudiante")]
+        public IHttpActionResult GetPrestamoEstudiante()
         {
+            List<string> lstResult = values.GetIdPrestEstudiantes();
+
+            if (lstResult[0].Equals("Error"))
+            {
+                return Content(HttpStatusCode.NotFound, lstResult[1]);
+            }
+            else
+            {
+                return Content(HttpStatusCode.OK, Convert.ToString(Convert.ToInt32(lstResult[1]) + 1));
+            }
+
         }
 
-        // PUT api/values/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE api/values/5
-        public void Delete(int id)
-        {
-        }
     }
 }
