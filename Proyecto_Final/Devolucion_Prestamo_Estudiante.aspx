@@ -7,17 +7,18 @@
     <script src="Scripts/bootstrap.min.js"></script>
     <link rel="stylesheet" href="DataTable/jquery.dataTables.min.css" />
     <script src="DataTable/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
     <script src="Controladores/ControladoresDevolucionEstudiantes.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="row container">
+    <div class="row container my-3">
         <h1 style="margin-top: 7px; margin-bottom: 7px;">Devolución Equipos</h1>
     </div>
     <div class="container form-inline">
         <label class="control-label">N°:  </label>
         <input type="text" id="txtNumeroPrestamo" name="txtNumeroPrestamo" class="form-control mx-2 my-2" readonly />
         <button id="btnBuscarPrestamo" type="button" class=" btn btn-dark" data-toggle="modal" data-target="#ModalPrestamos">
-            Buscar
+            <span class="fas fa-search mx-3">  Buscar
         </button>
     </div>
     <div class="container form-inline">
@@ -60,7 +61,9 @@
     </div>
     <div class="container my-2">
         <center>
-            <input type="button" value="Guardar" class="btn btn-success" id="btnGuardar" />
+            <button id="btnGuardar" name="btnGuardar" class="btn btn-success" onclick="return false">
+                    <span class="fas fa-save mx-2"></span>Guardar
+                </button>
         </center>
     </div>
     <!-- Modal Prestamos-->

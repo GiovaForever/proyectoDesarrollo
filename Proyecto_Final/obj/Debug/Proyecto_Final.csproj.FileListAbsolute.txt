@@ -103,7 +103,6 @@ E:\Universidad\Octavo\Desarrollo_IV\Proyecto_Final\proyectoDesarrollo\Proyecto_F
 E:\Universidad\Octavo\Desarrollo_IV\Proyecto_Final\proyectoDesarrollo\Proyecto_Final\bin\roslyn\vbc.rsp
 E:\Universidad\Octavo\Desarrollo_IV\Proyecto_Final\proyectoDesarrollo\Proyecto_Final\bin\roslyn\VBCSCompiler.exe
 E:\Universidad\Octavo\Desarrollo_IV\Proyecto_Final\proyectoDesarrollo\Proyecto_Final\bin\roslyn\VBCSCompiler.exe.config
-E:\Universidad\Octavo\Desarrollo_IV\Proyecto_Final\proyectoDesarrollo\Proyecto_Final\bin\AjaxControlToolkit.dll
 E:\Universidad\Octavo\Desarrollo_IV\Proyecto_Final\proyectoDesarrollo\Proyecto_Final\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 E:\Universidad\Octavo\Desarrollo_IV\Proyecto_Final\proyectoDesarrollo\Proyecto_Final\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 E:\Universidad\Octavo\Desarrollo_IV\Proyecto_Final\proyectoDesarrollo\Proyecto_Final\obj\Debug\Proyecto_Final.csproj.CopyComplete

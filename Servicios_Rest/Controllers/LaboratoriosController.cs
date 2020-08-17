@@ -87,5 +87,29 @@ namespace Servicios_Rest.Controllers
 
         }
 
+        [HttpGet]
+        [Route("api/Laboratorios/detalleLaboratorio")]
+        public IHttpActionResult GetLaboratoriosDetalle()
+        {
+
+            List<LaboratorioHorario> lstTipoLaboratorio = laboratorios.GetLaboratorioHorario();
+
+            if (lstTipoLaboratorio.Count > 0)
+            {
+                if (!String.IsNullOrEmpty(lstTipoLaboratorio[0].mensajeError))
+                {
+                    return Content(HttpStatusCode.NotFound, lstTipoLaboratorio[0].mensajeError);
+                }
+                else
+                {
+                    return Content(HttpStatusCode.OK, lstTipoLaboratorio);
+                }
+            }
+            else
+            {
+                return Content(HttpStatusCode.OK, lstTipoLaboratorio);
+            }
+
+        }
     }
 }

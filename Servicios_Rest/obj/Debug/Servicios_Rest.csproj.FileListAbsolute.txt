@@ -248,7 +248,6 @@ E:\Universidad\Octavo\Desarrollo_IV\Proyecto_Final\proyectoDesarrollo\Servicios_
 E:\Universidad\Octavo\Desarrollo_IV\Proyecto_Final\proyectoDesarrollo\Servicios_Rest\bin\es\System.Web.WebPages.resources.dll
 E:\Universidad\Octavo\Desarrollo_IV\Proyecto_Final\proyectoDesarrollo\Servicios_Rest\bin\es\System.Web.WebPages.Deployment.resources.dll
 E:\Universidad\Octavo\Desarrollo_IV\Proyecto_Final\proyectoDesarrollo\Servicios_Rest\bin\es\System.Web.WebPages.Razor.resources.dll
-E:\Universidad\Octavo\Desarrollo_IV\Proyecto_Final\proyectoDesarrollo\Servicios_Rest\obj\Debug\Servicios_Rest.csprojAssemblyReference.cache
 E:\Universidad\Octavo\Desarrollo_IV\Proyecto_Final\proyectoDesarrollo\Servicios_Rest\obj\Debug\Servicios_Rest.csproj.CopyComplete
 E:\Universidad\Octavo\Desarrollo_IV\Proyecto_Final\proyectoDesarrollo\Servicios_Rest\obj\Debug\Servicios_Rest.dll
 E:\Universidad\Octavo\Desarrollo_IV\Proyecto_Final\proyectoDesarrollo\Servicios_Rest\obj\Debug\Servicios_Rest.pdb

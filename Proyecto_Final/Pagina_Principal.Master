@@ -36,8 +36,14 @@
                                     <a class="dropdown-item" href="Gestion_Invitados.aspx">Invitados</a>
                                 </div>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="Gestion_Laboratorios.aspx">Laboratorios</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdownLaboratorios" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Laboratorios
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownUser">
+                                    <a class="dropdown-item" href="Gestion_Laboratorios.aspx">Administración</a>
+                                    <a class="dropdown-item" href="Cargar_Horario_Laboratorio.aspx">Cargar Horarios</a>
+                                    <a class="dropdown-item" href="Cargar_Equipos_Laboratorio.aspx">Cargar Equipos</a>
+                                </div>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="Gestion_Materias.aspx">Materias</a>

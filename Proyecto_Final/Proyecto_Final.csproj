@@ -91,6 +91,8 @@
     <Content Include="AlertifyJS\css\themes\semantic.min.css" />
     <Content Include="AlertifyJS\css\themes\semantic.rtl.css" />
     <Content Include="AlertifyJS\css\themes\semantic.rtl.min.css" />
+    <Content Include="Cargar_Equipos_Laboratorio.aspx" />
+    <Content Include="Cargar_Horario_Laboratorio.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -99,6 +101,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Controladores\ControladoresDevolucionEstudiantes.js" />
     <Content Include="Controladores\ControladoresDocentes.js" />
+    <Content Include="Controladores\ControladoresEquipos.js" />
+    <Content Include="Controladores\ControladoresHorarios.js" />
     <Content Include="Controladores\ControladoresInventarios.js" />
     <Content Include="Controladores\ControladoresInvitados.js" />
     <Content Include="Controladores\ControladoresLaboratorios.js" />
@@ -220,6 +224,7 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Scripts\xlsx.full.min.js" />
     <Content Include="Web.config" />
     <Content Include="Scripts\umd\popper.min.js.map" />
     <Content Include="Scripts\umd\popper.js.map" />
@@ -233,6 +238,20 @@
     <Content Include="Scripts\popper-utils.js.map" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cargar_Equipos_Laboratorio.aspx.cs">
+      <DependentUpon>Cargar_Equipos_Laboratorio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cargar_Equipos_Laboratorio.aspx.designer.cs">
+      <DependentUpon>Cargar_Equipos_Laboratorio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cargar_Horario_Laboratorio.aspx.cs">
+      <DependentUpon>Cargar_Horario_Laboratorio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cargar_Horario_Laboratorio.aspx.designer.cs">
+      <DependentUpon>Cargar_Horario_Laboratorio.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Devolucion_Prestamo_Estudiante.aspx.cs">
       <DependentUpon>Devolucion_Prestamo_Estudiante.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

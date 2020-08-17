@@ -20,23 +20,6 @@ namespace Servicios_Rest.Models
             return ConfigurationManager.ConnectionStrings["LaboratoriosConnectionString"].ConnectionString;
         }
 
-        private string ObtenerCodigo(string nombre)
-        {
-            string codigo = "";
-
-            switch (nombre)
-            {
-                case "Libre":
-                    codigo = "0";
-                    break;
-                case "Ocupado":
-                    codigo = "1";
-                    break;
-            }
-
-            return codigo;
-        }
-
         public List<Laboratorio> GetLaboratorios()
         {
             try
@@ -203,6 +186,52 @@ namespace Servicios_Rest.Models
                     mensajeError = ex.Message
                 };
 
+            }
+        }
+
+        public List<LaboratorioHorario> GetLaboratorioHorario()
+        {
+            try
+            {
+                List<LaboratorioHorario> lista = new List<LaboratorioHorario>();
+
+                string sql = @"SELECT L.idLaboratorio,L.nombreLaboratorio,L.ubicacionLaboratorio,TL.nombreTipoLaboratorio
+                                FROM Laboratorios L 
+                                INNER JOIN Tipo_Laboratorios TL ON L.idTipoLaboratorio=TL.idTipoLaboratorio";
+
+                using (SqlConnection connection = new SqlConnection(GetConnectionString()))
+                {
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        connection.Open();
+                        SqlDataReader reader = command.ExecuteReader(CommandBehavior.CloseConnection);
+
+                        while (reader.Read())
+                        {
+                            LaboratorioHorario laboratorio = new LaboratorioHorario()
+                            {
+                                idLaboratorio = reader["idLaboratorio"].ToString(),
+                                nombreLaboratorio = reader["nombreLaboratorio"].ToString(),
+                                ubicacionLaboratorio = reader["ubicacionLaboratorio"].ToString(),
+                                nombreTipoLaboratorio = reader["nombreTipoLaboratorio"].ToString()
+                            };
+                            
+                            lista.Add(laboratorio);
+                        }
+                        reader.Close();
+                    }
+                }
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                return new List<LaboratorioHorario>
+                {
+                    new LaboratorioHorario
+                    {
+                        mensajeError=ex.Message
+                    }
+                };
             }
         }
 

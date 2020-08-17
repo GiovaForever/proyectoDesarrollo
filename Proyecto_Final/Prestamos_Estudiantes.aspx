@@ -7,10 +7,11 @@
     <script src="Scripts/bootstrap.min.js"></script>
     <link rel="stylesheet" href="DataTable/jquery.dataTables.min.css" />
     <script src="DataTable/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
     <script src="Controladores/ControladoresPrestamosEstudiantes.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="row container">
+    <div class="row container my-3">
         <h1 style="margin-top: 7px; margin-bottom: 7px;">Préstamos Equipos</h1>
     </div>
     <div class="container form-inline">
@@ -40,7 +41,7 @@
                         </td>
                         <td rowspan="2" style="text-align: center">
                             <button id="btnBuscarLaboratorista" type="button" class=" btn btn-dark" data-toggle="modal" data-target="#ModalLaboratorista">
-                                Buscar
+                                <span class="fas fa-search mx-3">  Buscar
                             </button>
                         </td>
                     </tr>
@@ -60,7 +61,7 @@
                         </td>
                         <td rowspan="2" style="text-align: center">
                             <button id="btnBuscarEstudiante" type="button" class=" btn btn-dark" data-toggle="modal" data-target="#ModalEstudiante">
-                                Buscar
+                                <span class="fas fa-search mx-3">  Buscar
                             </button>
                         </td>
                     </tr>
@@ -90,7 +91,7 @@
                         </td>
                         <td rowspan="2" style="text-align: center">
                             <button id="btnBuscarInventario" type="button" class=" btn btn-dark" data-toggle="modal" data-target="#ModalInventario" tabindex="1">
-                                Buscar
+                                <span class="fas fa-search mx-3">  Buscar
                             </button>
                         </td>
                     </tr>
@@ -106,7 +107,9 @@
                     </tr>
                 </table>
                 <div class="form-group">
-                    <input type="button" value="Agregar" class="btn btn-primary" id="btnAgregar" />
+                    <button id="btnAgregar" name="btnAgregar" class="btn btn-primary" onclick="return false">
+                    <span class="fas fa-plus-square mx-2"></span>Agregar
+                </button>
                     <input type="text" id="txtId" name="txtId" style="opacity: 1; width: 30px" />
                     <input type="text" id="txtCantExis" name="txtCantExis" style="opacity: 1; width: 30px" />
                 </div>
@@ -132,7 +135,9 @@
     </div>
     <div class="container my-2">
         <center>
-            <input type="button" value="Guardar" class="btn btn-success" id="btnGuardar" />
+            <button id="btnGuardar" name="btnGuardar" class="btn btn-success" onclick="return false">
+                    <span class="fas fa-save mx-2"></span>Guardar
+                </button>
         </center>
     </div>
     <!-- Modal Laboratoristas-->
