@@ -99,7 +99,9 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Controladores\ControladoresDevolucionDocentes.js" />
     <Content Include="Controladores\ControladoresDevolucionEstudiantes.js" />
+    <Content Include="Controladores\ControladoresDevolucionInvitados.js" />
     <Content Include="Controladores\ControladoresDocentes.js" />
     <Content Include="Controladores\ControladoresEquipos.js" />
     <Content Include="Controladores\ControladoresHorarios.js" />
@@ -107,12 +109,16 @@
     <Content Include="Controladores\ControladoresInvitados.js" />
     <Content Include="Controladores\ControladoresLaboratorios.js" />
     <Content Include="Controladores\ControladoresMaterias.js" />
+    <Content Include="Controladores\ControladoresPrestamosDocentes.js" />
     <Content Include="Controladores\ControladoresPrestamosEstudiantes.js" />
+    <Content Include="Controladores\ControladoresPrestamosInvitados.js" />
     <Content Include="Controladores\ControladorEstudiantes.js" />
     <Content Include="Controladores\ControladorLaboratoristas.js" />
     <Content Include="DataTable\jquery.dataTables.min.css" />
     <Content Include="DataTable\jquery.dataTables.min.js" />
+    <Content Include="Devolucion_Prestamo_Docente.aspx" />
     <Content Include="Devolucion_Prestamo_Estudiante.aspx" />
+    <Content Include="Devolucion_Prestamo_Invitado.aspx" />
     <Content Include="Estilos\Estilos.css" />
     <Content Include="Gestion_Docentes.aspx" />
     <Content Include="Gestion_Estudiantes.aspx" />
@@ -124,7 +130,9 @@
     <Content Include="Imagenes\banner.jpeg" />
     <Content Include="Imagenes\fondo_claro.jpg" />
     <Content Include="Index.aspx" />
+    <Content Include="Prestamos_Docentes.aspx" />
     <Content Include="Prestamos_Estudiantes.aspx" />
+    <Content Include="Prestamos_Invitados.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -252,12 +260,26 @@
     <Compile Include="Cargar_Horario_Laboratorio.aspx.designer.cs">
       <DependentUpon>Cargar_Horario_Laboratorio.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Devolucion_Prestamo_Docente.aspx.cs">
+      <DependentUpon>Devolucion_Prestamo_Docente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Devolucion_Prestamo_Docente.aspx.designer.cs">
+      <DependentUpon>Devolucion_Prestamo_Docente.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Devolucion_Prestamo_Estudiante.aspx.cs">
       <DependentUpon>Devolucion_Prestamo_Estudiante.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Devolucion_Prestamo_Estudiante.aspx.designer.cs">
       <DependentUpon>Devolucion_Prestamo_Estudiante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Devolucion_Prestamo_Invitado.aspx.cs">
+      <DependentUpon>Devolucion_Prestamo_Invitado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Devolucion_Prestamo_Invitado.aspx.designer.cs">
+      <DependentUpon>Devolucion_Prestamo_Invitado.aspx</DependentUpon>
     </Compile>
     <Compile Include="Gestion_Docentes.aspx.cs">
       <DependentUpon>Gestion_Docentes.aspx</DependentUpon>
@@ -322,12 +344,26 @@
     <Compile Include="Pagina_Principal.Master.designer.cs">
       <DependentUpon>Pagina_Principal.Master</DependentUpon>
     </Compile>
+    <Compile Include="Prestamos_Docentes.aspx.cs">
+      <DependentUpon>Prestamos_Docentes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Prestamos_Docentes.aspx.designer.cs">
+      <DependentUpon>Prestamos_Docentes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Prestamos_Estudiantes.aspx.cs">
       <DependentUpon>Prestamos_Estudiantes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Prestamos_Estudiantes.aspx.designer.cs">
       <DependentUpon>Prestamos_Estudiantes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Prestamos_Invitados.aspx.cs">
+      <DependentUpon>Prestamos_Invitados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Prestamos_Invitados.aspx.designer.cs">
+      <DependentUpon>Prestamos_Invitados.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

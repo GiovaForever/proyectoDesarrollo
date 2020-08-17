@@ -31,7 +31,7 @@ namespace Servicios_Rest.Controllers
             }
             else
             {
-                return Content(HttpStatusCode.OK,lstResult[1]);
+                return Content(HttpStatusCode.OK, lstResult[1]);
             }
 
         }
@@ -41,6 +41,40 @@ namespace Servicios_Rest.Controllers
         public IHttpActionResult GetPrestamoEstudiante()
         {
             List<string> lstResult = values.GetIdPrestEstudiantes();
+
+            if (lstResult[0].Equals("Error"))
+            {
+                return Content(HttpStatusCode.NotFound, lstResult[1]);
+            }
+            else
+            {
+                return Content(HttpStatusCode.OK, Convert.ToString(Convert.ToInt32(lstResult[1]) + 1));
+            }
+
+        }
+
+        [HttpGet]
+        [Route("api/values/prestamoDocente")]
+        public IHttpActionResult GetPrestamoDocente()
+        {
+            List<string> lstResult = values.GetIdPrestDocentes();
+
+            if (lstResult[0].Equals("Error"))
+            {
+                return Content(HttpStatusCode.NotFound, lstResult[1]);
+            }
+            else
+            {
+                return Content(HttpStatusCode.OK, Convert.ToString(Convert.ToInt32(lstResult[1]) + 1));
+            }
+
+        }
+
+        [HttpGet]
+        [Route("api/values/prestamoInvitado")]
+        public IHttpActionResult GetPrestamoInvitados()
+        {
+            List<string> lstResult = values.GetIdPrestInvitados();
 
             if (lstResult[0].Equals("Error"))
             {

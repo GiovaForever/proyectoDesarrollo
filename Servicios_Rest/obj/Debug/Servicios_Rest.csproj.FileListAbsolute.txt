@@ -251,3 +251,4 @@ E:\Universidad\Octavo\Desarrollo_IV\Proyecto_Final\proyectoDesarrollo\Servicios_
 E:\Universidad\Octavo\Desarrollo_IV\Proyecto_Final\proyectoDesarrollo\Servicios_Rest\obj\Debug\Servicios_Rest.csproj.CopyComplete
 E:\Universidad\Octavo\Desarrollo_IV\Proyecto_Final\proyectoDesarrollo\Servicios_Rest\obj\Debug\Servicios_Rest.dll
 E:\Universidad\Octavo\Desarrollo_IV\Proyecto_Final\proyectoDesarrollo\Servicios_Rest\obj\Debug\Servicios_Rest.pdb
+E:\Universidad\Octavo\Desarrollo_IV\Proyecto_Final\proyectoDesarrollo\Servicios_Rest\obj\Debug\Servicios_Rest.csprojAssemblyReference.cache

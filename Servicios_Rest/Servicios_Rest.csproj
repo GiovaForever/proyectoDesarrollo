@@ -220,11 +220,15 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HorariosController.cs" />
     <Compile Include="Controllers\InventariosController.cs" />
+    <Compile Include="Controllers\PrestamosDocentesController.cs" />
     <Compile Include="Controllers\PrestamosEstudiantesController.cs" />
+    <Compile Include="Controllers\PrestamosInvitadosController.cs" />
     <Compile Include="Models\DatosDetallePrestamosEst.cs" />
     <Compile Include="Models\DatosPrestamoEstudiante.cs" />
     <Compile Include="Models\DetallePrestamo.cs" />
+    <Compile Include="Models\DetPrestDocenteDAL.cs" />
     <Compile Include="Models\DetPrestEstudianteDAL.cs" />
+    <Compile Include="Models\DetPrestInvitadoDAL.cs" />
     <Compile Include="Models\Equipo.cs" />
     <Compile Include="Models\EquiposDAL.cs" />
     <Compile Include="Models\Horario.cs" />
@@ -255,6 +259,8 @@
     <Compile Include="Models\LaboratoriosDAL.cs" />
     <Compile Include="Models\Laboratorista.cs" />
     <Compile Include="Models\LaboratoristasDAL.cs" />
+    <Compile Include="Models\MasPrestInvitadoDAL.cs" />
+    <Compile Include="Models\MasPrestDocenteDAL.cs" />
     <Compile Include="Models\MasPrestEstudianteDAL.cs" />
     <Compile Include="Models\Materia.cs" />
     <Compile Include="Models\MateriasDAL.cs" />
