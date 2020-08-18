@@ -102,6 +102,7 @@
     <Content Include="Controladores\ControladoresDevolucionDocentes.js" />
     <Content Include="Controladores\ControladoresDevolucionEstudiantes.js" />
     <Content Include="Controladores\ControladoresDevolucionInvitados.js" />
+    <Content Include="Controladores\ControladoresDevolucionLabDocente.js" />
     <Content Include="Controladores\ControladoresDocentes.js" />
     <Content Include="Controladores\ControladoresEquipos.js" />
     <Content Include="Controladores\ControladoresHorarios.js" />
@@ -117,6 +118,7 @@
     <Content Include="Controladores\ControladorLaboratoristas.js" />
     <Content Include="DataTable\jquery.dataTables.min.css" />
     <Content Include="DataTable\jquery.dataTables.min.js" />
+    <Content Include="Devolucion_Laboratorios_Docentes.aspx" />
     <Content Include="Devolucion_Prestamo_Docente.aspx" />
     <Content Include="Devolucion_Prestamo_Estudiante.aspx" />
     <Content Include="Devolucion_Prestamo_Invitado.aspx" />
@@ -261,6 +263,13 @@
     </Compile>
     <Compile Include="Cargar_Horario_Laboratorio.aspx.designer.cs">
       <DependentUpon>Cargar_Horario_Laboratorio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Devolucion_Laboratorios_Docentes.aspx.cs">
+      <DependentUpon>Devolucion_Laboratorios_Docentes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Devolucion_Laboratorios_Docentes.aspx.designer.cs">
+      <DependentUpon>Devolucion_Laboratorios_Docentes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Devolucion_Prestamo_Docente.aspx.cs">
       <DependentUpon>Devolucion_Prestamo_Docente.aspx</DependentUpon>

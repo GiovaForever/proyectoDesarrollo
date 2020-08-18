@@ -16,16 +16,18 @@
     </div>
     <div class="row container">
         <div class="col-sm-5">
-            <div class="form-group">
+            <div class="form-group form-inline">
                 <label class="control-label">Código:</label>
+                <input type="text" id="txtCodigo" name="txtCodigo" class="form-control mx-2" readonly placeholder="Id" />
             </div>
             <div class="form-group form-inline">
-                <input type="text" id="txtCodigo" name="txtCodigo" class="form-control" readonly placeholder="Id" />
+                <label class="control-label">Fecha:</label>
+                <input type="text" id="txtFecha" name="txtCodigo" class="form-control mx-3" readonly placeholder="dd/mm/yyyy" />
             </div>
             <div class="form-group">
                 <label class="control-label">Laboratorista:</label>
                 <input type="text" id="txtCedulaLaboratorista" name="txtNombre" class="form-control my-2" readonly placeholder="9999999999" />
-                <input type="text" id="txtNombreLaboratorista" name="txtNombre" class="form-control my-2" readonly placeholder="LAB00" />
+                <input type="text" id="txtNombreLaboratorista" name="txtNombre" class="form-control my-2" readonly placeholder="Name" />
                 <center>
                     <button id="btnBuscarLaboratorista" type="button" class=" btn btn-dark mx-2" data-toggle="modal" data-target="#ModalLaboratorista">
                         <span class="fas fa-search mx-2"></span>Buscar
@@ -48,9 +50,9 @@
                 <label class="control-label" style="opacity: 0">Código:</label>
             </div>
             <div class="form-group form-inline">
-                <input type="text" id="txtCodigoLaboratorio" name="txtCodigoLaboratorio" class="form-control" readonly style="opacity: 1; width: 30px" />
-                <input type="text" id="txtCodigoDia" name="txtCodigoDia" class="form-control" readonly style="opacity: 1; width: 30px" />
-                <input type="text" id="txtCodigoMateria" name="txtCodigoMateria" class="form-control" readonly style="opacity: 1; width: 30px" />
+                <input type="text" id="txtCodigoLaboratorio" name="txtCodigoLaboratorio" class="form-control" readonly style="opacity: 0; width: 30px" />
+                <input type="text" id="txtCodigoDia" name="txtCodigoDia" class="form-control" readonly style="opacity: 0; width: 30px" />
+                <input type="text" id="txtCodigoMateria" name="txtCodigoMateria" class="form-control" readonly style="opacity: 0; width: 30px" />
             </div>
             <div class="form-group">
                 <label class="control-label">Materia:</label>
@@ -72,6 +74,9 @@
             <center>
                 <button id="btnGuardar" name="btnGuardar" class="btn btn-success" onclick="return false">
                     <span class="fas fa-save mx-2"></span>Guardar
+                </button>
+            <button id="btnLimpiar" name="btnGuardar" class="btn btn-warning" onclick="return false">
+                    <span class="fas fa-eraser mx-2"></span>Limpiar
                 </button>
             </center>
         </div>
@@ -137,7 +142,7 @@
             </div>
         </div>
     </div>
-     <!-- Modal Materias-->
+    <!-- Modal Materias-->
     <div class="modal fade" id="ModalMaterias" tabindex="-1" role="dialog" aria-labelledby="ModalMateriasLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">

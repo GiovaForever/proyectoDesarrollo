@@ -17,8 +17,8 @@
     <div class="container form-inline">
         <label class="control-label">N°:  </label>
         <input type="text" id="txtNumeroPrestamo" name="txtNumeroPrestamo" class="form-control mx-2 my-2" readonly />
-        <button id="btnBuscarPrestamo" type="button" class=" btn btn-dark" data-toggle="modal" data-target="#ModalPrestamos">
-            <span class="fas fa-search mx-3">Buscar
+        <button id="btnBuscarPrestamo" type="button" class=" btn btn-dark mx-3" data-toggle="modal" data-target="#ModalPrestamos">
+            <span class="fas fa-search mx-3"> Buscar
         </button>
     </div>
     <div class="container form-inline">
@@ -63,6 +63,9 @@
         <center>
             <button id="btnGuardar" name="btnGuardar" class="btn btn-primary" onclick="return false">
                     <span class="fas fa-save mx-2"></span>Guardar
+                </button>
+            <button id="btnLimpiar" name="btnGuardar" class="btn btn-warning" onclick="return false">
+                    <span class="fas fa-eraser mx-2"></span>Limpiar
                 </button>
         </center>
     </div>

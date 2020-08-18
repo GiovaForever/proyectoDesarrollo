@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Pagina_Principal.Master" AutoEventWireup="true" CodeBehind="Prestamos_Invitados.aspx.cs" Inherits="Proyecto_Final.Prestamos_Invitados" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" href="Content/bootstrap.min.css">
     <script src="Scripts/jquery-3.5.1.min.js"></script>
@@ -39,8 +40,8 @@
                             <input type="text" id="txtCedulaLaboratorista" name="txtCedulaLaboratorista" class="form-control" readonly placeholder="Cédula" />
                         </td>
                         <td rowspan="2" style="text-align: center">
-                            <button id="btnBuscarLaboratorista" type="button" class=" btn btn-dark" data-toggle="modal" data-target="#ModalLaboratorista">
-                                <span class="fas fa-search mx-3">Buscar
+                            <button id="btnBuscarLaboratorista" type="button" class=" btn btn-dark mx-3" data-toggle="modal" data-target="#ModalLaboratorista">
+                                <span class="fas fa-search mx-3"> Buscar
                             </button>
                         </td>
                     </tr>
@@ -59,8 +60,8 @@
                             <input type="text" id="txtCedulaInvitado" name="txtCedulaInvitado" class="form-control" readonly placeholder="Cédula" />
                         </td>
                         <td rowspan="2" style="text-align: center">
-                            <button id="btnBuscarInvitado" type="button" class=" btn btn-dark" data-toggle="modal" data-target="#ModalInvitado">
-                                <span class="fas fa-search mx-3">Buscar
+                            <button id="btnBuscarInvitado" type="button" class=" btn btn-dark mx-3" data-toggle="modal" data-target="#ModalInvitado">
+                                <span class="fas fa-search mx-3"> Buscar
                             </button>
                         </td>
                     </tr>
@@ -89,8 +90,8 @@
                             <input type="text" id="txtCategoria" name="txtCategoria" class="form-control" readonly placeholder="Categoria" />
                         </td>
                         <td rowspan="2" style="text-align: center">
-                            <button id="btnBuscarInventario" type="button" class=" btn btn-dark" data-toggle="modal" data-target="#ModalInventario" tabindex="1">
-                                <span class="fas fa-search mx-3">Buscar
+                            <button id="btnBuscarInventario" type="button" class=" btn btn-dark mx-3" data-toggle="modal" data-target="#ModalInventario" tabindex="1">
+                                <span class="fas fa-search mx-3"> Buscar
                             </button>
                         </td>
                     </tr>
@@ -109,8 +110,8 @@
                     <button id="btnAgregar" name="btnAgregar" class="btn btn-success" onclick="return false">
                         <span class="fas fa-plus-square mx-2"></span>Agregar
                     </button>
-                    <input type="text" id="txtId" name="txtId" style="opacity: 1; width: 30px" />
-                    <input type="text" id="txtCantExis" name="txtCantExis" style="opacity: 1; width: 30px" />
+                    <input type="text" id="txtId" name="txtId" style="opacity: 0; width: 30px" />
+                    <input type="text" id="txtCantExis" name="txtCantExis" style="opacity: 0; width: 30px" />
                 </div>
             </div>
         </div>
@@ -136,6 +137,9 @@
         <center>
             <button id="btnGuardar" name="btnGuardar" class="btn btn-primary" onclick="return false">
                     <span class="fas fa-save mx-2"></span>Guardar
+                </button>
+            <button id="btnLimpiar" name="btnGuardar" class="btn btn-warning" onclick="return false">
+                    <span class="fas fa-eraser mx-2"></span>Limpiar
                 </button>
         </center>
     </div>

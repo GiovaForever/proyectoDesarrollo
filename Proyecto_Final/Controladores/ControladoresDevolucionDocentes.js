@@ -1,6 +1,8 @@
 ﻿$(document).ready(function () {
 
     cargarTablaPrestamos();
+    $("#btnGuardar").prop("disabled", true);
+    $("#btnLimpiar").prop("disabled", true);
     var tableDetail = $("#tbl_Detalle").DataTable({
         paging: false,
         info: false,
@@ -33,6 +35,12 @@
 
     });
 
+    $("#btnLimpiar").click(function () {
+        if (confirm("¿Está Seguro De Limpiar Los Campos?")) {
+            limpiarCampos();
+        }
+    });
+
 });
 
 function limpiarCampos() {
@@ -43,6 +51,8 @@ function limpiarCampos() {
     $("#txtCedulaLaboratorista").val("");
     $("#txtDatosLaboratorista").val("");
     $("#tbl_Detalle").dataTable().fnClearTable();
+    $("#btnGuardar").prop("disabled", true);
+    $("#btnLimpiar").prop("disabled", true);
     loadTablePrestamos();
 }
 
@@ -63,6 +73,8 @@ function cargarTablaPrestamos() {
         $("#txtCedulaLaboratorista").val(datosTabla[4]);
         $("#txtDatosLaboratorista").val(datosTabla[5]);
         $("#tbl_Detalle").dataTable().fnClearTable();
+        $("#btnGuardar").prop("disabled", false);
+        $("#btnLimpiar").prop("disabled", false);
         loadTableDetalle();
         $("#ModalPrestamos").modal('toggle');
     });

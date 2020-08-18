@@ -55,11 +55,11 @@
                                 <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Prestamos
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="divider"></a>                                    <a class="dropdown-header ">Inventario</a>
+                                    <a class="divider"></a><a class="dropdown-header ">Inventario</a>
                                     <a class="dropdown-item" href="Prestamos_Estudiantes.aspx">Estudiantes</a>
                                     <a class="dropdown-item" href="Prestamos_Docentes.aspx">Docentes</a>
                                     <a class="dropdown-item" href="Prestamos_Invitados.aspx">Invitados</a>
-                                    <a class="divider"></a>                                    <a class="dropdown-header ">Laboratorios</a>
+                                    <a class="divider"></a><a class="dropdown-header ">Laboratorios</a>
                                     <a class="dropdown-item" href="Prestamos_Laboratorios_Docentes.aspx">Docentes</a>
                                 </div>
                             </li>
@@ -67,11 +67,12 @@
                                 <a class="nav-link dropdown-toggle" id="navbarDropdownDevoluciones" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Devoluciones
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownDevoluciones">
-                                    <a class="divider"></a>                                    <a class="dropdown-header ">Inventario</a>
+                                    <a class="divider"></a><a class="dropdown-header ">Inventario</a>
                                     <a class="dropdown-item" href="Devolucion_Prestamo_Estudiante.aspx">Estudiantes</a>
                                     <a class="dropdown-item" href="Devolucion_Prestamo_Docente.aspx">Docentes</a>
                                     <a class="dropdown-item" href="Devolucion_Prestamo_Invitado.aspx">Invitados</a>
-                                    <a class="divider"></a>                                    <a class="dropdown-header ">Laboratorios</a>
+                                    <a class="divider"></a><a class="dropdown-header ">Laboratorios</a>
+                                    <a class="dropdown-item" href="Devolucion_Laboratorios_Docentes.aspx">Docentes</a>
                                 </div>
                             </li>
                         </ul>

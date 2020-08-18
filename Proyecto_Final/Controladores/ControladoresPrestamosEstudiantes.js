@@ -98,6 +98,12 @@
 
     });
 
+    $("#btnLimpiar").click(function () {
+        if (confirm("¿Está Seguro De Limpiar Los Campos?")) {
+            limpiarCampos();
+        }
+    });
+
 });
 
 function guardarPrestamo(tableDetail) {
@@ -224,6 +230,7 @@ function configuracionInicial() {
     $("#btnBuscarInventario").prop("disabled", true);
     $("#btnAgregar").prop("disabled", true);
     $("#btnGuardar").prop("disabled", true);
+    $("#btnLimpiar").prop("disabled", true);
     $("#btnBuscarLaboratorista").focus();
 }
 
@@ -244,6 +251,7 @@ function cargarLaboratoristas() {
         $("#txtDatosLaboratorista").val(datos);
         $("#btnBuscarEstudiante").prop("disabled", false);
         $("#btnBuscarEstudiante").focus();
+        $("#btnLimpiar").prop("disabled", false);
         $("#ModalLaboratorista").modal('toggle');
     });
 

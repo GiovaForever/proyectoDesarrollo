@@ -230,6 +230,8 @@
     <Compile Include="Models\DetPrestDocenteDAL.cs" />
     <Compile Include="Models\DetPrestEstudianteDAL.cs" />
     <Compile Include="Models\DetPrestInvitadoDAL.cs" />
+    <Compile Include="Models\DevolucionLaboratorioDocente.cs" />
+    <Compile Include="Models\DevolucionLaboratoriosDocentesDAL.cs" />
     <Compile Include="Models\Equipo.cs" />
     <Compile Include="Models\EquiposDAL.cs" />
     <Compile Include="Models\Horario.cs" />
@@ -256,8 +258,10 @@
     <Compile Include="Models\Invitado.cs" />
     <Compile Include="Models\InvitadosDAL.cs" />
     <Compile Include="Models\Laboratorio.cs" />
+    <Compile Include="Models\LaboratorioDocente.cs" />
     <Compile Include="Models\LaboratorioHorario.cs" />
     <Compile Include="Models\LaboratoriosDAL.cs" />
+    <Compile Include="Models\LaboratoriosDocentesDAL.cs" />
     <Compile Include="Models\Laboratorista.cs" />
     <Compile Include="Models\LaboratoristasDAL.cs" />
     <Compile Include="Models\MasPrestInvitadoDAL.cs" />
