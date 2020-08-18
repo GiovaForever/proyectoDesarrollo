@@ -108,6 +108,7 @@
     <Content Include="Controladores\ControladoresInventarios.js" />
     <Content Include="Controladores\ControladoresInvitados.js" />
     <Content Include="Controladores\ControladoresLaboratorios.js" />
+    <Content Include="Controladores\ControladoresLaboratoriosDocentes.js" />
     <Content Include="Controladores\ControladoresMaterias.js" />
     <Content Include="Controladores\ControladoresPrestamosDocentes.js" />
     <Content Include="Controladores\ControladoresPrestamosEstudiantes.js" />
@@ -133,6 +134,7 @@
     <Content Include="Prestamos_Docentes.aspx" />
     <Content Include="Prestamos_Estudiantes.aspx" />
     <Content Include="Prestamos_Invitados.aspx" />
+    <Content Include="Prestamos_Laboratorios_Docentes.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -364,6 +366,13 @@
     </Compile>
     <Compile Include="Prestamos_Invitados.aspx.designer.cs">
       <DependentUpon>Prestamos_Invitados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Prestamos_Laboratorios_Docentes.aspx.cs">
+      <DependentUpon>Prestamos_Laboratorios_Docentes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Prestamos_Laboratorios_Docentes.aspx.designer.cs">
+      <DependentUpon>Prestamos_Laboratorios_Docentes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

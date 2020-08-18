@@ -111,5 +111,33 @@ namespace Servicios_Rest.Controllers
             }
 
         }
+
+        [HttpGet]
+        [Route("api/Laboratorios/laboratorioLibres")]
+        public IHttpActionResult GetLaboratoriosLibres()
+        {
+
+            List<Laboratorio> lstTipoLaboratorio = laboratorios.GetLaboratorios();
+
+
+            if (lstTipoLaboratorio.Count > 0)
+            {
+                if (!String.IsNullOrEmpty(lstTipoLaboratorio[0].mensajeError))
+                {
+                    return Content(HttpStatusCode.NotFound, lstTipoLaboratorio[0].mensajeError);
+                }
+                else
+                {
+                    lstTipoLaboratorio = lstTipoLaboratorio.Where(x => x.estadoLaboratorio == "Libre").ToList();
+                    return Content(HttpStatusCode.OK, lstTipoLaboratorio);
+                }
+            }
+            else
+            {
+                return Content(HttpStatusCode.OK, lstTipoLaboratorio);
+            }
+
+        }
+
     }
 }

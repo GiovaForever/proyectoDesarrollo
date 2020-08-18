@@ -61,7 +61,7 @@
     </div>
     <div class="container my-2">
         <center>
-            <button id="btnGuardar" name="btnGuardar" class="btn btn-success" onclick="return false">
+            <button id="btnGuardar" name="btnGuardar" class="btn btn-primary" onclick="return false">
                     <span class="fas fa-save mx-2"></span>Guardar
                 </button>
         </center>

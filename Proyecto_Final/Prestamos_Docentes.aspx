@@ -107,7 +107,7 @@
                     </tr>
                 </table>
                 <div class="form-group">
-                    <button id="btnAgregar" name="btnAgregar" class="btn btn-primary" onclick="return false">
+                    <button id="btnAgregar" name="btnAgregar" class="btn btn-success" onclick="return false">
                         <span class="fas fa-plus-square mx-2"></span>Agregar
                     </button>
                     <input type="text" id="txtId" name="txtId" style="opacity: 1; width: 30px" />
@@ -135,7 +135,7 @@
     </div>
     <div class="container my-2">
         <center>
-            <button id="btnGuardar" name="btnGuardar" class="btn btn-success" onclick="return false">
+            <button id="btnGuardar" name="btnGuardar" class="btn btn-primary" onclick="return false">
                     <span class="fas fa-save mx-2"></span>Guardar
                 </button>
         </center>

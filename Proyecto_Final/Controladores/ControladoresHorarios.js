@@ -21,10 +21,12 @@
             $("#btnBuscarLaboratorista").focus();
         }
     });
-
+    //Obtener el archivo xlsx
     $(".custom-file-input").on("change", function (event) {
+        //Carga en memoria
         var fileName = $(this).val().split("\\").pop();
         $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        //Ruta de acceso web
         var tmppath = URL.createObjectURL(event.target.files[0]);
         path = tmppath;
     });
@@ -91,7 +93,7 @@ function addRowTable(data) {
 }
 
 function convertExcelJson(archivo) {
-
+    console.log(archivo);
     var url = archivo;
     var json = "";
     var oReq = new XMLHttpRequest();
@@ -113,7 +115,7 @@ function convertExcelJson(archivo) {
         var worksheet = workbook.Sheets[first_sheet_name];
 
         json = XLSX.utils.sheet_to_json(worksheet, { raw: true });
-
+        console.log(json);
         registrarHorario(json);
     }
     oReq.send();

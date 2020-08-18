@@ -71,6 +71,40 @@ namespace Servicios_Rest.Controllers
         }
 
         [HttpGet]
+        [Route("api/values/prestamoLabDocente")]
+        public IHttpActionResult GetPrestamoLabDocente()
+        {
+            List<string> lstResult = values.GetIdLaboratorioDocente();
+
+            if (lstResult[0].Equals("Error"))
+            {
+                return Content(HttpStatusCode.NotFound, lstResult[1]);
+            }
+            else
+            {
+                return Content(HttpStatusCode.OK, Convert.ToString(Convert.ToInt32(lstResult[1]) + 1));
+            }
+
+        }
+
+        [HttpGet]
+        [Route("api/values/codigoDiaPrestamo")]
+        public IHttpActionResult GetCodigoDiaPrestamo()
+        {
+            List<string> lstResult = values.GetIdDia();
+
+            if (lstResult[0].Equals("Error"))
+            {
+                return Content(HttpStatusCode.NotFound, lstResult[1]);
+            }
+            else
+            {
+                return Content(HttpStatusCode.OK, Convert.ToString(lstResult[1]));
+            }
+
+        }
+
+        [HttpGet]
         [Route("api/values/prestamoInvitado")]
         public IHttpActionResult GetPrestamoInvitados()
         {
