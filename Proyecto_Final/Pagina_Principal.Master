@@ -79,7 +79,7 @@
                                 <a class="nav-link dropdown-toggle" id="navbarDropdownReportes" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Reportes
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownReportes">
-                                    <a class="dropdown-item" href="Devolucion_Prestamo_Estudiante.aspx">Estudiantes</a>
+                                    <a class="dropdown-item" href="Reporte_Materias.aspx">Materias</a>
                                     <a class="dropdown-item" href="Devolucion_Prestamo_Docente.aspx">Docentes</a>
                                     <a class="dropdown-item" href="Devolucion_Prestamo_Invitado.aspx">Invitados</a>
                                     <a class="dropdown-item" href="Devolucion_Laboratorios_Docentes.aspx">Docentes</a>
