@@ -1,44 +1,59 @@
 ﻿$(document).ready(function () {
 
-    cargarTablaPrestamos();
-    $("#btnGuardar").prop("disabled", true);
-    $("#btnLimpiar").prop("disabled", true);
-    var tableDetail = $("#tbl_Detalle").DataTable({
-        paging: false,
-        info: false,
-        searching: false,
-        ordering: false,
-        columnDefs: [
-            {
-                targets: 0,
-                width: "15%",
-                className: "dt-center"
-            }, {
-                targets: 1,
-                width: "40%",
-            }, {
-                targets: 2,
-                width: "30%"
-            }, {
-                targets: 3,
-                width: "15%",
-                className: "dt-center"
+    var usuarioRol = localStorage.getItem("usuario");
+    console.log(usuarioRol);
+
+    if (usuarioRol !== "Invitado") {
+
+        cargarTablaPrestamos();
+        $("#btnGuardar").prop("disabled", true);
+        $("#btnLimpiar").prop("disabled", true);
+        var tableDetail = $("#tbl_Detalle").DataTable({
+            paging: false,
+            info: false,
+            searching: false,
+            ordering: false,
+            columnDefs: [
+                {
+                    targets: 0,
+                    width: "15%",
+                    className: "dt-center"
+                }, {
+                    targets: 1,
+                    width: "40%",
+                }, {
+                    targets: 2,
+                    width: "30%"
+                }, {
+                    targets: 3,
+                    width: "15%",
+                    className: "dt-center"
+                }
+            ]
+        });
+        $("#btnGuardar").click(function () {
+
+            if (confirm("Esta Seguro De Guardar") === true) {
+                guardarPrestamo(tableDetail);
+                limpiarCampos();
             }
-        ]
-    });
-    $("#btnGuardar").click(function () {
 
-        if (confirm("Esta Seguro De Guardar") === true) {
-            guardarPrestamo(tableDetail);
-            limpiarCampos();
-        }
+        });
 
-    });
+        $("#btnLimpiar").click(function () {
+            if (confirm("¿Está Seguro De Limpiar Los Campos?")) {
+                limpiarCampos();
+            }
+        });
 
-    $("#btnLimpiar").click(function () {
-        if (confirm("¿Está Seguro De Limpiar Los Campos?")) {
-            limpiarCampos();
-        }
+    } else {
+        url = "Pagina_No_Autorizada.aspx";
+        $(location).attr('href', url);
+    }
+
+    $("#btnSesion").click(function () {
+        url = "Login_Sistema.aspx";
+        $(location).attr('href', url);
     });
 
 });

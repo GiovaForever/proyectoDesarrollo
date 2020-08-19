@@ -4,10 +4,6 @@
 
     if (usuarioRol !== "Invitado") {
 
-        $("#btnSesion").val("Cerrar Sesión");
-        $("#btnSesion").removeClass();
-        $("#btnSesion").addClass("btn btn-danger");
-
         if (usuarioRol !== "Admin") {
             url = "Pagina_No_Autorizada.aspx";
             $(location).attr('href', url);
