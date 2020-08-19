@@ -18,8 +18,13 @@ namespace Servicios_Rest.Controllers
             usuarios = new UsuariosDAL();
         }
 
-        public IHttpActionResult GetRolUsuario(Usuario usuario)
+        public IHttpActionResult GetRolUsuario([FromUri]string correo, [FromUri]string contrasenia)
         {
+            Usuario usuario = new Usuario()
+            {
+                correoUsuario=correo,
+                passwordUsuario=contrasenia
+            };
             List<string> lstResult = usuarios.GetRolUsuario(usuario);
 
             if (lstResult[0].Equals("Error"))

@@ -115,6 +115,7 @@
     <Content Include="Controladores\ControladoresPrestamosEstudiantes.js" />
     <Content Include="Controladores\ControladoresPrestamosInvitados.js" />
     <Content Include="Controladores\ControladorEstudiantes.js" />
+    <Content Include="Controladores\Controladores_Login.js" />
     <Content Include="Controladores\ControladorLaboratoristas.js" />
     <Content Include="DataTable\jquery.dataTables.min.css" />
     <Content Include="DataTable\jquery.dataTables.min.js" />

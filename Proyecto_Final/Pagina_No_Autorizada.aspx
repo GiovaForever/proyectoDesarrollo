@@ -12,6 +12,21 @@
             margin-right: auto;
         }
     </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var usuarioRol = localStorage.getItem("usuario");
+            console.log(usuarioRol);
+            if (usuarioRol !== "Invitado") {
+                $("#btnSesion").val("Cerrar Session");
+                $("#btnSesion").removeClass();
+                $("#btnSesion").addClass("btn btn-danger");
+            }
+            $("#btnSesion").click(function () {
+                url = "Login_Sistema.aspx";
+                $(location).attr('href', url);
+            });
+        });
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container my-4">
