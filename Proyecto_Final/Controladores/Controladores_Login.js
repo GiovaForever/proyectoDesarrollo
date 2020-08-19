@@ -1,6 +1,7 @@
 ﻿$(document).ready(function () {
 
     limpiarCampos();
+    $("#txtCorreo").focus()
     var rolUsuario = localStorage.getItem("usuario");
     if (rolUsuario !== "Invitado") {
         localStorage.setItem("usuario", "Invitado");
