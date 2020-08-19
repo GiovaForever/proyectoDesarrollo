@@ -21,8 +21,7 @@
             <span class="fas fa-search mx-3"> Buscar
         </button>
     </div>
-     <asp:Button ID="Button1" runat="server" Text="GENERAR" class="btn btn-dark" 
-        OnClick="Button1_Click" />
+     <asp:Button ID="Button1" runat="server" Text="GENERAR" class="btn btn-dark mx-5" OnClick="Button1_Click" />
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
     <rsweb:ReportViewer ID="ReportViewerPrestamosEstudiantes" runat="server" Height="448px" 
         Width="709px"></rsweb:ReportViewer>
