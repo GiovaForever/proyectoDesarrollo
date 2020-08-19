@@ -44,7 +44,6 @@ namespace Servicios_Rest.Controllers
         [Route("api/Laboratiorios/LaboratoriosbyId")]
         public IHttpActionResult GetLaboratoriosbyId([FromUri] string id)
         {
-
             List<Laboratorio> lstTipoLaboratorio = laboratorios.GetLaboratoriosByTipo(id);
 
             if (lstTipoLaboratorio.Count > 0)

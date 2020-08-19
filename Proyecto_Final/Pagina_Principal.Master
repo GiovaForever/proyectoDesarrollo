@@ -80,7 +80,7 @@
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownReportes">
                                     <a class="dropdown-item" href="Reporte_Materias.aspx">Materias</a>
-                                    <a class="dropdown-item" href="Devolucion_Prestamo_Docente.aspx">Docentes</a>
+                                    <a class="dropdown-item" href="Reporte_Equipos.aspx">Equipos</a>
                                     <a class="dropdown-item" href="Devolucion_Prestamo_Invitado.aspx">Invitados</a>
                                     <a class="dropdown-item" href="Devolucion_Laboratorios_Docentes.aspx">Docentes</a>
                                 </div>

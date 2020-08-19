@@ -145,6 +145,7 @@
     <Content Include="Devolucion_Prestamo_Invitado.aspx" />
     <Content Include="Estilos\Estilos.css" />
     <Content Include="Estilos\Estilos_Login.css" />
+    <Content Include="Reporte_Equipos.aspx" />
     <Content Include="Reporte_Materias.aspx" />
     <Content Include="Gestion_Docentes.aspx" />
     <Content Include="Gestion_Estudiantes.aspx" />
@@ -348,6 +349,13 @@
     <Compile Include="Devolucion_Prestamo_Invitado.aspx.designer.cs">
       <DependentUpon>Devolucion_Prestamo_Invitado.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Reporte_Equipos.aspx.cs">
+      <DependentUpon>Reporte_Equipos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporte_Equipos.aspx.designer.cs">
+      <DependentUpon>Reporte_Equipos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Reporte_Materias.aspx.cs">
       <DependentUpon>Reporte_Materias.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -489,6 +497,7 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ReporteEquipos.rdlc" />
     <EmbeddedResource Include="ReporteMaterias.rdlc" />
   </ItemGroup>
   <PropertyGroup>

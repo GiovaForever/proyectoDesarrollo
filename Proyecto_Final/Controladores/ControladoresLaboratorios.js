@@ -1,5 +1,19 @@
 ﻿$(document).ready(function () {
 
+    $("#cmbTipoLaboratorio").change(function () {
+        if ($("#cmbTipoLaboratorio").val() !== "-1") {
+            var tipo = $("#cmbTipoLaboratorio").val();
+            obtenerLaboratorios(tipo);
+        }
+    });
+
+    $("#cmbLaboratorio").change(function () {
+        if ($("#cmbLaboratorio").val() !== "-1") {
+            var tipo = $("#cmbLaboratorio").val();
+            $("#txt1").val(tipo);
+        }
+    });
+
     obtenerTipoLaboratorios();
     configuracionInicial();
     cargarTablaDatos();
@@ -186,7 +200,7 @@ function obtenerTipoLaboratorios() {
             alertify.error("Error: " + mensaje);
         },
         success: function (data) {
-            cargarTipoLaboratorios(data)
+            cargarTipoLaboratorios(data);
         }
     });
 }
@@ -198,7 +212,34 @@ function cargarTipoLaboratorios(data) {
     });
     $("#cmbTipoLaboratorio").html(html_code);
 }
+function obtenerLaboratorios(tipo) {
+    $.ajax({
+        type: "GET",
+        url: "https://localhost:44315/api/Laboratiorios/LaboratoriosbyId?id=" + tipo,
+        data: {},
+        contentType: "application/json;charset=utf-8",
+        error: function (xhr, ajaxOptions, ThrownError) {
 
+            if (xhr.status === 404) {
+                var mensaje = xhr.responseJSON;
+            } else {
+                mensaje = "Servidor No Disponible. Consulte Soporte."
+            }
+
+            alertify.error("Error: " + mensaje);
+        },
+        success: function (data) {
+            cargarLaboratorios(data);
+        }
+    });
+}
+function cargarLaboratorios(data) {
+    var html_code = '<option value="-1">---Seleccione---</option>';
+    $.each(data, function (key, value) {
+        html_code += '<option value="' + value.idLaboratorio + '">' + value.nombreLaboratorio + '</option>';
+    });
+    $("#cmbLaboratorio").html(html_code);
+}
 function configuracionInicial() {
     $("#btnGuardar").prop("disabled", true);
     $("#btnLimpiar").prop("disabled", true);
@@ -244,7 +285,7 @@ function cargarCamposGrid(data) {
 function obtenerIdTipoLaboratorio(nombreTipo) {
     $.ajax({
         type: "GET",
-        url: "https://localhost:44315/api/TipoLaboratorios?nombre="+nombreTipo,
+        url: "https://localhost:44315/api/TipoLaboratorios?nombre=" + nombreTipo,
         data: {},
         contentType: "application/json;charset=utf-8",
         error: function (xhr, ajaxOptions, ThrownError) {
@@ -288,6 +329,7 @@ function loadDataTable() {
         success: function (data) {
             addRowTable(data);
         }
+
     });
 }
 

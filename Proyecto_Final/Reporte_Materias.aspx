@@ -4,7 +4,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <h1 style="margin-top: 7px; margin-bottom: 7px;">Reporte Materias</h1>
+     <h1 class="my-3">Reporte Materias</h1>
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
      <rsweb:ReportViewer ID="ReportViewerMaterias" runat="server" Height="448px" 
         Width="709px"></rsweb:ReportViewer>
