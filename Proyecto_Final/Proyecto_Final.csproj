@@ -120,6 +120,7 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Controladores\ReporteEquipos.js" />
     <Content Include="Controladores\ControladoresDevolucionDocentes.js" />
     <Content Include="Controladores\ControladoresDevolucionEstudiantes.js" />
     <Content Include="Controladores\ControladoresDevolucionInvitados.js" />
@@ -138,6 +139,8 @@
     <Content Include="Controladores\ControladorEstudiantes.js" />
     <Content Include="Controladores\Controladores_Login.js" />
     <Content Include="Controladores\ControladorLaboratoristas.js" />
+    <Content Include="Controladores\ReporteInventarios.js" />
+    <Content Include="Controladores\ReportePrestamoEstudiante.js" />
     <Content Include="DataTable\jquery.dataTables.min.css" />
     <Content Include="DataTable\jquery.dataTables.min.js" />
     <Content Include="Devolucion_Laboratorios_Docentes.aspx" />
@@ -146,6 +149,8 @@
     <Content Include="Devolucion_Prestamo_Invitado.aspx" />
     <Content Include="Estilos\Estilos.css" />
     <Content Include="Estilos\Estilos_Login.css" />
+    <Content Include="Reporte_PresEstudiantes.aspx" />
+    <Content Include="Reporte_Inventario.aspx" />
     <Content Include="Reporte_Equipos.aspx" />
     <Content Include="Reporte_Materias.aspx" />
     <Content Include="Gestion_Docentes.aspx" />
@@ -350,6 +355,20 @@
     <Compile Include="Devolucion_Prestamo_Invitado.aspx.designer.cs">
       <DependentUpon>Devolucion_Prestamo_Invitado.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Reporte_PresEstudiantes.aspx.cs">
+      <DependentUpon>Reporte_PresEstudiantes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporte_PresEstudiantes.aspx.designer.cs">
+      <DependentUpon>Reporte_PresEstudiantes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_Inventario.aspx.cs">
+      <DependentUpon>Reporte_Inventario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporte_Inventario.aspx.designer.cs">
+      <DependentUpon>Reporte_Inventario.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Reporte_Equipos.aspx.cs">
       <DependentUpon>Reporte_Equipos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -499,7 +518,10 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ReporteEquipos.rdlc" />
+    <EmbeddedResource Include="ReporteInventario.rdlc" />
+    <EmbeddedResource Include="ReporteInventarioCategoria.rdlc" />
     <EmbeddedResource Include="ReporteMaterias.rdlc" />
+    <EmbeddedResource Include="ReportePrestamosEstudiantes.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

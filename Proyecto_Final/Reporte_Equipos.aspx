@@ -8,10 +8,10 @@
     <script src="Scripts/bootstrap.min.js"></script>
     <link rel="stylesheet" href="DataTable/jquery.dataTables.min.css" />
     <script src="DataTable/jquery.dataTables.min.js"></script>
-    <script src="Controladores/ControladoresLaboratorios.js"></script>
+    <script src="Controladores/ReporteEquipos.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <h1 class="my-3">Reporte Laboratorios</h1>
+     <h1 class="my-3">Reporte Equipos</h1>
     <div class="row container">
         <div class="form-group">
             <label class="control-label">Tipo Laboratorio</label>

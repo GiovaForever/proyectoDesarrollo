@@ -81,8 +81,9 @@
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownReportes">
                                     <a class="dropdown-item" href="Reporte_Materias.aspx">Materias</a>
                                     <a class="dropdown-item" href="Reporte_Equipos.aspx">Equipos</a>
-                                    <a class="dropdown-item" href="Devolucion_Prestamo_Invitado.aspx">Invitados</a>
-                                    <a class="dropdown-item" href="Devolucion_Laboratorios_Docentes.aspx">Docentes</a>
+                                    <a class="dropdown-item" href="Reporte_Inventario.aspx">Inventarios</a>
+                                    <a class="divider"></a><a class="dropdown-header ">Prestamos</a>
+                                    <a class="dropdown-item" href="Reporte_PresEstudiantes.aspx">Estudiantes</a>
                                 </div>
                             </li>
                         </ul>
