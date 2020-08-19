@@ -141,6 +141,7 @@
     <Content Include="Controladores\Controladores_Login.js" />
     <Content Include="Controladores\ControladorLaboratoristas.js" />
     <Content Include="Controladores\ReporteInventarios.js" />
+    <Content Include="Controladores\ReportePrestamoDocente.js" />
     <Content Include="Controladores\ReportePrestamoEstudiante.js" />
     <Content Include="DataTable\jquery.dataTables.min.css" />
     <Content Include="DataTable\jquery.dataTables.min.js" />

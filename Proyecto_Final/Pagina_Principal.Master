@@ -94,6 +94,7 @@
                                     <a class="divider"></a><a class="dropdown-header ">Prestamos</a>
                                     <a class="dropdown-item" href="Reporte_PresEstudiantes.aspx">Estudiantes</a>
                                     <a class="dropdown-item" href="Reporte_PresEstudiantes.aspx">Docentes</a>
+                                    <a class="dropdown-item" href="Reporte_PresEstudiantes.aspx">Invitados</a>
                                 </div>
                             </li>
                         </ul>
