@@ -13,15 +13,6 @@
     <link rel="stylesheet" type="text/css" href="AlertifyJS/css/alertify.css" />
     <link rel="stylesheet" type="text/css" href="AlertifyJS/css/themes/default.css" />
     <script src="AlertifyJS/alertify.js"></script>
-    <script type="text/javascript">
-        var usuarioRol = localStorage.getItem("usuario");
-        console.log(usuarioRol);
-        $(document).ready(function () {
-            if (usuarioRol !== "Invitado") {
-                $("#btnSesion").val("Cerrar Sesión");
-            }
-        });
-    </script>
 </head>
 <body>
     <form id="form1" runat="server">

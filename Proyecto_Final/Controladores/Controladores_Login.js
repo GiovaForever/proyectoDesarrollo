@@ -1,6 +1,7 @@
 ﻿$(document).ready(function () {
 
     limpiarCampos();
+    $("#btnSesion").val("Iniciar Sesión");
     $("#txtCorreo").focus()
     var rolUsuario = localStorage.getItem("usuario");
     if (rolUsuario !== "Invitado") {
