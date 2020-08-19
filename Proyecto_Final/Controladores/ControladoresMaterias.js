@@ -1,46 +1,69 @@
 ﻿$(document).ready(function () {
 
-    obtenerCarreras();
-    configuracionInicial();
-    //Materias
-    cargarTablaDatos();
-    //Docentes
-    cargarTablaDocentes();
+    var usuarioRol = localStorage.getItem("usuario");
+    console.log(usuarioRol);
 
-    $("#txtNombre").keyup(function () {
-        var cantLetras = $("#txtNombre").val().length;
-        if (cantLetras !== 0) {
-            $("#btnGuardar").prop("disabled", false);
-            $("#btnLimpiar").prop("disabled", false);
+    if (usuarioRol !== "Invitado") {
+
+        $("#btnSesion").val("Cerrar Session");
+        $("#btnSesion").removeClass();
+        $("#btnSesion").addClass("btn btn-danger");
+
+        if (usuarioRol !== "Admin") {
+            url = "Pagina_No_Autorizada.aspx";
+            $(location).attr('href', url);
         } else {
-            $("#btnGuardar").prop("disabled", true);
-            $("#btnLimpiar").prop("disabled", true);
+            obtenerCarreras();
+            configuracionInicial();
+            //Materias
+            cargarTablaDatos();
+            //Docentes
+            cargarTablaDocentes();
+
+            $("#txtNombre").keyup(function () {
+                var cantLetras = $("#txtNombre").val().length;
+                if (cantLetras !== 0) {
+                    $("#btnGuardar").prop("disabled", false);
+                    $("#btnLimpiar").prop("disabled", false);
+                } else {
+                    $("#btnGuardar").prop("disabled", true);
+                    $("#btnLimpiar").prop("disabled", true);
+                }
+            });
+
+            $("#btnLimpiar").click(function () {
+                limpiarCampos();
+            });
+
+            $("#btnEliminar").click(function () {
+                if (confirm('¿Esta Seguro De Eliminar?')) {
+                    eliminarMateria();
+                }
+            });
+
+            $("#btnGuardar").click(function () {
+                var actualizar = $("#txtId").prop("disabled");
+
+                if (validarCampos() === true) {
+                    if (actualizar === true) {
+                        actualizarMateria();
+                    } else {
+                        insertarMateria();
+                    }
+                } else {
+                    alertify.error("Existen Campos Vacios. Verifique Por favor.");
+                }
+
+            });
         }
-    });
+    } else {
+        url = "Pagina_No_Autorizada.aspx";
+        $(location).attr('href', url);
+    }
 
-    $("#btnLimpiar").click(function () {
-        limpiarCampos();
-    });
-
-    $("#btnEliminar").click(function () {
-        if (confirm('¿Esta Seguro De Eliminar?')) {
-            eliminarMateria();
-        }
-    });
-
-    $("#btnGuardar").click(function () {
-        var actualizar = $("#txtId").prop("disabled");
-
-        if (validarCampos() === true) {
-            if (actualizar === true) {
-                actualizarMateria();
-            } else {
-                insertarMateria();
-            }
-        } else {
-            alertify.error("Existen Campos Vacios. Verifique Por favor.");
-        }
-
+    $("#btnSesion").click(function () {
+        url = "Login_Sistema.aspx";
+        $(location).attr('href', url);
     });
 
 });

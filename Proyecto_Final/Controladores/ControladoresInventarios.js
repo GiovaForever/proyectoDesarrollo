@@ -1,43 +1,66 @@
 ﻿$(document).ready(function () {
 
-    obtenerCategorias();
-    configuracionInicial();
-    cargarTablaDatos();
+    var usuarioRol = localStorage.getItem("usuario");
+    console.log(usuarioRol);
 
-    $("#txtNombre").keyup(function () {
-        var cantLetras = $("#txtNombre").val().length;
-        if (cantLetras !== 0) {
-            $("#btnGuardar").prop("disabled", false);
-            $("#btnLimpiar").prop("disabled", false);
+    if (usuarioRol !== "Invitado") {
+
+        $("#btnSesion").val("Cerrar Session");
+        $("#btnSesion").removeClass();
+        $("#btnSesion").addClass("btn btn-danger");
+
+        if (usuarioRol !== "Admin") {
+            url = "Pagina_No_Autorizada.aspx";
+            $(location).attr('href', url);
         } else {
-            $("#btnGuardar").prop("disabled", true);
-            $("#btnLimpiar").prop("disabled", true);
+            obtenerCategorias();
+            configuracionInicial();
+            cargarTablaDatos();
+
+            $("#txtNombre").keyup(function () {
+                var cantLetras = $("#txtNombre").val().length;
+                if (cantLetras !== 0) {
+                    $("#btnGuardar").prop("disabled", false);
+                    $("#btnLimpiar").prop("disabled", false);
+                } else {
+                    $("#btnGuardar").prop("disabled", true);
+                    $("#btnLimpiar").prop("disabled", true);
+                }
+            });
+
+            $("#btnLimpiar").click(function () {
+                limpiarCampos();
+            });
+
+            $("#btnEliminar").click(function () {
+                if (confirm('¿Esta Seguro De Eliminar?')) {
+                    eliminarInventario();
+                }
+            });
+
+            $("#btnGuardar").click(function () {
+                var actualizar = $("#txtId").prop("disabled");
+
+                if (validarCampos() === true) {
+                    if (actualizar === true) {
+                        actualizarInventario();
+                    } else {
+                        insertarInventario();
+                    }
+                } else {
+                    alertify.error("Existen Campos Vacios. Verifique Por favor.");
+                }
+
+            });
         }
-    });
+    } else {
+        url = "Pagina_No_Autorizada.aspx";
+        $(location).attr('href', url);
+    }
 
-    $("#btnLimpiar").click(function () {
-        limpiarCampos();
-    });
-
-    $("#btnEliminar").click(function () {
-        if (confirm('¿Esta Seguro De Eliminar?')) {
-            eliminarInventario();
-        }
-    });
-
-    $("#btnGuardar").click(function () {
-        var actualizar = $("#txtId").prop("disabled");
-
-        if (validarCampos() === true) {
-            if (actualizar === true) {
-                actualizarInventario();
-            } else {
-                insertarInventario();
-            }
-        } else {
-            alertify.error("Existen Campos Vacios. Verifique Por favor.");
-        }
-
+    $("#btnSesion").click(function () {
+        url = "Login_Sistema.aspx";
+        $(location).attr('href', url);
     });
 
 });
@@ -142,7 +165,7 @@ function validarCampos() {
     } else if ($("#cmbCategoria").val() === "-1") {
         $("#cmbCategoria").focus();
         return false;
-    } else if ($("#txtCantidad").val() === "") {
+    } else if ($("#txtCantidad").val() === "" || $("#txtCantidad").val() === "0") {
         $("#txtCantidad").focus();
         return false;
     }

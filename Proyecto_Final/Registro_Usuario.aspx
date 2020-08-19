@@ -27,7 +27,7 @@
                 <i class="fas fa-key icon"></i>
                 <input type="password" placeholder="Contraseña" class="estiloText">
             </div>
-            <input type="submit" value="Registrate" class="button mx-3" onclick="return false;">
+            <input type="submit" value="Registrate" class="button my-2" onclick="return false;">
             <p>¿Ya tienes una cuenta? <a class="link" href="Login_Sistema.aspx">Iniciar Sesion</a></p>
         </div>
     </div>
