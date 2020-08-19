@@ -123,6 +123,7 @@
     <Content Include="Devolucion_Prestamo_Estudiante.aspx" />
     <Content Include="Devolucion_Prestamo_Invitado.aspx" />
     <Content Include="Estilos\Estilos.css" />
+    <Content Include="Estilos\Estilos_Login.css" />
     <Content Include="Gestion_Docentes.aspx" />
     <Content Include="Gestion_Estudiantes.aspx" />
     <Content Include="Gestion_Inventarios.aspx" />
@@ -132,6 +133,7 @@
     <Content Include="Gestion_Materias.aspx" />
     <Content Include="Imagenes\banner.jpeg" />
     <Content Include="Imagenes\fondo_claro.jpg" />
+    <Content Include="Imagenes\imagen_no_autorizado.png" />
     <Content Include="Index.aspx" />
     <Content Include="Login_Sistema.aspx" />
     <Content Include="Pagina_No_Autorizada.aspx" />
@@ -139,6 +141,7 @@
     <Content Include="Prestamos_Estudiantes.aspx" />
     <Content Include="Prestamos_Invitados.aspx" />
     <Content Include="Prestamos_Laboratorios_Docentes.aspx" />
+    <Content Include="Registro_Usuario.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -400,6 +403,13 @@
       <DependentUpon>Prestamos_Laboratorios_Docentes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registro_Usuario.aspx.cs">
+      <DependentUpon>Registro_Usuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registro_Usuario.aspx.designer.cs">
+      <DependentUpon>Registro_Usuario.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

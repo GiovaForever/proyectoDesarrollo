@@ -108,3 +108,4 @@ E:\Universidad\Octavo\Desarrollo_IV\Proyecto_Final\proyectoDesarrollo\Proyecto_F
 E:\Universidad\Octavo\Desarrollo_IV\Proyecto_Final\proyectoDesarrollo\Proyecto_Final\obj\Debug\Proyecto_Final.csproj.CopyComplete
 E:\Universidad\Octavo\Desarrollo_IV\Proyecto_Final\proyectoDesarrollo\Proyecto_Final\obj\Debug\Proyecto_Final.dll
 E:\Universidad\Octavo\Desarrollo_IV\Proyecto_Final\proyectoDesarrollo\Proyecto_Final\obj\Debug\Proyecto_Final.pdb
+E:\Universidad\Octavo\Desarrollo_IV\Proyecto_Final\proyectoDesarrollo\Proyecto_Final\obj\Debug\Proyecto_Final.csprojAssemblyReference.cache
