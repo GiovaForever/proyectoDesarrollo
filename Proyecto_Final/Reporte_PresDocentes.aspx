@@ -2,7 +2,7 @@
 
 <%@ Register Assembly="Microsoft.ReportViewer.WebForms" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-        <link rel="stylesheet" href="Content/bootstrap.min.css">
+    <link rel="stylesheet" href="Content/bootstrap.min.css">
     <script src="Scripts/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="Scripts/bootstrap.min.js"></script>
@@ -12,20 +12,21 @@
     <script src="Controladores/ReportePrestamoDocente.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-      <h1 class="my-3">Reporte Prestamos Docentes</h1>    
+    <h1 class="row container my-3">Reporte Prestamos Docentes</h1>
     <div class="container form-inline">
         <label class="control-label">N°:  </label>
         <input type="text" id="txtNumeroPrestamo" name="txtNumeroPrestamo" class="form-control mx-2 my-2" readonly />
         <button id="btnBuscarPrestamo" type="button" class=" btn btn-dark mx-3" data-toggle="modal" data-target="#ModalPrestamos">
-            <span class="fas fa-search mx-3"> Buscar
+            <span class="fas fa-search mx-3">Buscar
         </button>
     </div>
-      <asp:Button ID="Button1" runat="server" Text="GENERAR" class="btn btn-dark" 
+    <asp:Button ID="Button1" runat="server" Text="GENERAR" class="btn btn-dark mx-5"
         OnClick="Button1_Click" />
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-    <rsweb:ReportViewer ID="ReportViewerPrestamosDocdentes" runat="server" Height="448px" 
-        Width="709px"></rsweb:ReportViewer>
-     <!-- Modal Prestamos-->
+    <rsweb:ReportViewer ID="ReportViewerPrestamosDocdentes" runat="server" Height="448px"
+        Width="709px">
+    </rsweb:ReportViewer>
+    <!-- Modal Prestamos-->
     <div class="modal fade" id="ModalPrestamos" tabindex="-1" role="dialog" aria-labelledby="ModalPrestamosLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">

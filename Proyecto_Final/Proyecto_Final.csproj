@@ -153,6 +153,7 @@
     <Content Include="Estilos\Estilos_Login.css" />
     <Content Include="Estilos\index.css" />
     <Content Include="Imagenes\user.png" />
+    <Content Include="Reporte_PresDocentes.aspx" />
     <Content Include="Reporte_PresEstudiantes.aspx" />
     <Content Include="Reporte_Inventario.aspx" />
     <Content Include="Reporte_Equipos.aspx" />
@@ -175,6 +176,7 @@
     <Content Include="Prestamos_Invitados.aspx" />
     <Content Include="Prestamos_Laboratorios_Docentes.aspx" />
     <Content Include="Registro_Usuario.aspx" />
+    <Content Include="Reporte_PresInvitados.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -359,6 +361,13 @@
     <Compile Include="Devolucion_Prestamo_Invitado.aspx.designer.cs">
       <DependentUpon>Devolucion_Prestamo_Invitado.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Reporte_PresDocentes.aspx.cs">
+      <DependentUpon>Reporte_PresDocentes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporte_PresDocentes.aspx.designer.cs">
+      <DependentUpon>Reporte_PresDocentes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Reporte_PresEstudiantes.aspx.cs">
       <DependentUpon>Reporte_PresEstudiantes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -499,6 +508,13 @@
     </Compile>
     <Compile Include="Registro_Usuario.aspx.designer.cs">
       <DependentUpon>Registro_Usuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_PresInvitados.aspx.cs">
+      <DependentUpon>Reporte_PresInvitados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporte_PresInvitados.aspx.designer.cs">
+      <DependentUpon>Reporte_PresInvitados.aspx</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
   </ItemGroup>

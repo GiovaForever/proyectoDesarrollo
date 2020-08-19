@@ -86,7 +86,7 @@
                                     <a class="dropdown-item" href="Reporte_PresEstudiantes.aspx">Estudiantes</a>
                                     <a class="dropdown-item" href="Reporte_PresDocentes.aspx">Docentes</a>
                                     <a class="dropdown-item" href="Reporte_PresInvitados.aspx">Invitados</a>
-                                      <a class="dropdown-item" href="Reporte_PresLaboratorios.aspx">Laboratorios</a>
+                                      <%--<a class="dropdown-item" href="Reporte_PresLaboratorios.aspx">Laboratorios</a>--%>
                                 </div>
                             </li>
                         </ul>
