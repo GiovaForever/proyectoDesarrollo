@@ -1,5 +1,6 @@
 ﻿$(document).ready(function () {
     limpiarCampos();
+    $("#txtNombreCompleto").focus()
     $("#btnRegistrar").click(function () {
         if (verificarCampos() === true) {
             registrarNuevoUsuario();
