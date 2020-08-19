@@ -73,7 +73,62 @@ namespace Servicios_Rest.Models
                 };
             }
         }
+        public List<Laboratorio> GetLaboratoriosByTipo(string tipo)
+        {
+            try
+            {
+                List<Laboratorio> lista = new List<Laboratorio>();
 
+                string sql = @" SELECT *
+                               FROM Laboratorios L 
+                               INNER JOIN Tipo_Laboratorios TL ON L.idTipoLaboratorio=TL.idTipoLaboratorio where l.idTipoLaboratorio=@tipo";
+
+                using (SqlConnection connection = new SqlConnection(GetConnectionString()))
+                {
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        connection.Open();
+                        command.Parameters.AddWithValue("@tipo", tipo);
+
+                        SqlDataReader reader = command.ExecuteReader(CommandBehavior.CloseConnection);
+
+                        while (reader.Read())
+                        {
+
+                            Laboratorio laboratorio = new Laboratorio();
+                            laboratorio.idLaboratorio = reader["idLaboratorio"].ToString();
+                            laboratorio.nombreLaboratorio = reader["nombreLaboratorio"].ToString();
+                            laboratorio.ubicacionLaboratorio = reader["ubicacionLaboratorio"].ToString();
+                            laboratorio.capacidadLaboratorio = reader["capacidadLaboratorio"].ToString();
+                            laboratorio.tipoLaboratorio = reader["nombreTipoLaboratorio"].ToString();
+                            laboratorio.estadoLaboratorio = reader["estadoLaboratorio"].ToString();
+                            switch (laboratorio.estadoLaboratorio)
+                            {
+                                case "0":
+                                    laboratorio.estadoLaboratorio = estado.Libre.ToString();
+                                    break;
+                                case "1":
+                                    laboratorio.estadoLaboratorio = estado.Ocupado.ToString();
+                                    break;
+                            }
+                            lista.Add(laboratorio);
+                        }
+                        reader.Close();
+                    }
+                }
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                return new List<Laboratorio>
+                {
+                    new Laboratorio
+                    {
+                        mensajeError=ex.Message
+                    }
+                };
+            }
+        }
         public Laboratorio PostLaboratorios(Laboratorio laboratorio)
         {
 

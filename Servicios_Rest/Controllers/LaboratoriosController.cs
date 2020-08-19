@@ -40,7 +40,30 @@ namespace Servicios_Rest.Controllers
             }
 
         }
+        [HttpGet]
+        [Route("api/Laboratiorios/LaboratoriosbyId")]
+        public IHttpActionResult GetLaboratoriosbyId([FromUri] string id)
+        {
 
+            List<Laboratorio> lstTipoLaboratorio = laboratorios.GetLaboratoriosByTipo(id);
+
+            if (lstTipoLaboratorio.Count > 0)
+            {
+                if (!String.IsNullOrEmpty(lstTipoLaboratorio[0].mensajeError))
+                {
+                    return Content(HttpStatusCode.NotFound, lstTipoLaboratorio[0].mensajeError);
+                }
+                else
+                {
+                    return Content(HttpStatusCode.OK, lstTipoLaboratorio);
+                }
+            }
+            else
+            {
+                return Content(HttpStatusCode.OK, lstTipoLaboratorio);
+            }
+
+        }
         public IHttpActionResult PostLaboratorios(Laboratorio laboratorio)
         {
 
