@@ -59,6 +59,7 @@ function cargarTablaPrestamos() {
         $(this).removeClass('selected');
         table.search('').draw();
         $("#txtNumeroPrestamo").val(datosTabla[0]);
+        $("#ModalPrestamos").modal('toggle');
         loadTableDetalle();
     });
 }
@@ -125,7 +126,7 @@ function loadTableDetalle() {
             alertify.error("Error: " + mensaje);
         },
         success: function (data) {
-            addRowDetalle(data);
+            //addRowDetalle(data);
         }
     });
 }
