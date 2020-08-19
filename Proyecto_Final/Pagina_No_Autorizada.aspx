@@ -17,7 +17,7 @@
             var usuarioRol = localStorage.getItem("usuario");
             console.log(usuarioRol);
             if (usuarioRol !== "Invitado") {
-                $("#btnSesion").val("Cerrar Session");
+                $("#btnSesion").val("Cerrar Sesión");
                 $("#btnSesion").removeClass();
                 $("#btnSesion").addClass("btn btn-danger");
             }

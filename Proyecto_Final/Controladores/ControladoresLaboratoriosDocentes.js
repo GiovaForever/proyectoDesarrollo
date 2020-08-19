@@ -1,25 +1,41 @@
 ﻿$(document).ready(function () {
-    configuracionInicial();
-    cargarLaboratoristas();
-    cargarTablaLaboratorios();
-    cargarCodigoDia();
-    cargarNumeroPrestamo();
-    cargarFecha();
-    $("#btnGuardar").prop("disabled", true);
-    $("#btnLimpiar").prop("disabled", true);
 
-    $("#btnGuardar").click(function () {
-        if (verificarCampos() === true) {
-            insertarLaboratorioDocente();
-        } else {
-            alertify.error("Existen Campos Vacios. Verifique Por Favor");
-        }
-    });
+    var usuarioRol = localStorage.getItem("usuario");
+    console.log(usuarioRol);
 
-    $("#btnLimpiar").click(function () {
-        if (confirm("¿Está Seguro De Limpiar Los Campos?")) {
-            limpiarCampos();
-        }
+    if (usuarioRol !== "Invitado") {
+
+        configuracionInicial();
+        cargarLaboratoristas();
+        cargarTablaLaboratorios();
+        cargarCodigoDia();
+        cargarNumeroPrestamo();
+        cargarFecha();
+        $("#btnGuardar").prop("disabled", true);
+        $("#btnLimpiar").prop("disabled", true);
+
+        $("#btnGuardar").click(function () {
+            if (verificarCampos() === true) {
+                insertarLaboratorioDocente();
+            } else {
+                alertify.error("Existen Campos Vacios. Verifique Por Favor");
+            }
+        });
+
+        $("#btnLimpiar").click(function () {
+            if (confirm("¿Está Seguro De Limpiar Los Campos?")) {
+                limpiarCampos();
+            }
+        });
+
+    } else {
+        url = "Pagina_No_Autorizada.aspx";
+        $(location).attr('href', url);
+    }
+
+    $("#btnSesion").click(function () {
+        url = "Login_Sistema.aspx";
+        $(location).attr('href', url);
     });
 
 });

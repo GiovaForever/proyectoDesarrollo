@@ -20,14 +20,14 @@
             </select>
         </div>
         <div class="form-group">
-            <label class="control-label">Tipo Laboratorio</label>
-            <select name="cmbLaboratorio" id="cmbLaboratorio" class="form-control dropdown">
+            <label class="control-label mx-3">Tipo Laboratorio</label>
+            <select name="cmbLaboratorio" id="cmbLaboratorio" class="form-control dropdown mx-3">
                 <option value="">---Seleccione---</option>
             </select>
         </div>
     </div>
     <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true" ></asp:ScriptManager>
-    <asp:Button ID="Button1" runat="server" Text="GENERAR" class="btn btn-dark" 
+    <asp:Button ID="Button1" runat="server" Text="GENERAR" class="btn btn-dark my-2" 
         OnClick="Button1_Click" />
     <input type="text" id="txt1" name="txt1" style="visibility:hidden" />
      <rsweb:ReportViewer ID="ReportViewerLaboratorios" runat="server" Height="448px" 

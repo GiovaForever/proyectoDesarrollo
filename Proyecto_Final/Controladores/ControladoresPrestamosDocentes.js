@@ -1,107 +1,122 @@
 ﻿$(document).ready(function () {
 
-    cargarLaboratoristas();
-    cargarDocentes();
-    cargarInventario();
-    configuracionInicial();
-    cargarNumeroPrestamo();
-    cargarFecha();
+    var usuarioRol = localStorage.getItem("usuario");
+    console.log(usuarioRol);
 
-    var tableDetail = $("#tbl_Detalle").DataTable({
-        paging: false,
-        info: false,
-        searching: false,
-        ordering: false,
-        columnDefs: [
-            {
-                targets: 0,
-                width: "15%",
-                className: "dt-center"
-            }, {
-                targets: 1,
-                width: "40%",
-            }, {
-                targets: 2,
-                width: "30%"
-            }, {
-                targets: 3,
-                width: "15%",
-                className: "dt-center"
-            }
-        ]
-    });
+    if (usuarioRol !== "Invitado") {
 
-    $("#btnAgregar").click(function () {
+        cargarLaboratoristas();
+        cargarDocentes();
+        cargarInventario();
+        configuracionInicial();
+        cargarNumeroPrestamo();
+        cargarFecha();
 
-        var cantStock = $("#txtCantExis").val();
-        var cantPrestamo = $("#txtCantidad").val();
-
-        if (cantPrestamo !== "" && cantPrestamo !== "0") {
-            var actualizar = false;
-            var contador = 0;
-            var eliminar = 0;
-
-            tableDetail.rows().data().each(function (value) {
-                if (value[1] === $("#txtNombreInventario").val()) {
-                    cantPrestamo = Number(cantPrestamo) + Number(value[3]);
-                    actualizar = true;
-                    eliminar = contador;
+        var tableDetail = $("#tbl_Detalle").DataTable({
+            paging: false,
+            info: false,
+            searching: false,
+            ordering: false,
+            columnDefs: [
+                {
+                    targets: 0,
+                    width: "15%",
+                    className: "dt-center"
+                }, {
+                    targets: 1,
+                    width: "40%",
+                }, {
+                    targets: 2,
+                    width: "30%"
+                }, {
+                    targets: 3,
+                    width: "15%",
+                    className: "dt-center"
                 }
-                contador = contador + 1;
-            });
+            ]
+        });
 
-            if (Number(cantPrestamo) <= Number(cantStock)) {
+        $("#btnAgregar").click(function () {
 
-                if (actualizar !== false) {
-                    tableDetail.row(eliminar).remove();
+            var cantStock = $("#txtCantExis").val();
+            var cantPrestamo = $("#txtCantidad").val();
+
+            if (cantPrestamo !== "" && cantPrestamo !== "0") {
+                var actualizar = false;
+                var contador = 0;
+                var eliminar = 0;
+
+                tableDetail.rows().data().each(function (value) {
+                    if (value[1] === $("#txtNombreInventario").val()) {
+                        cantPrestamo = Number(cantPrestamo) + Number(value[3]);
+                        actualizar = true;
+                        eliminar = contador;
+                    }
+                    contador = contador + 1;
+                });
+
+                if (Number(cantPrestamo) <= Number(cantStock)) {
+
+                    if (actualizar !== false) {
+                        tableDetail.row(eliminar).remove();
+                    }
+
+                    tableDetail.row.add([
+                        $("#txtId").val(),
+                        $("#txtNombreInventario").val(),
+                        $("#txtCategoria").val(),
+                        cantPrestamo
+                    ]).draw(false);
+
+                    limpiarCamposInventario();
+
+                } else {
+                    alertify.error("Error Stock Insuficiente. ");
+                    $("#txtCantidad").focus();
                 }
-
-                tableDetail.row.add([
-                    $("#txtId").val(),
-                    $("#txtNombreInventario").val(),
-                    $("#txtCategoria").val(),
-                    cantPrestamo
-                ]).draw(false);
-
-                limpiarCamposInventario();
-
             } else {
-                alertify.error("Error Stock Insuficiente. ");
+                alertify.error("La Cantidad No Puede Ser 0");
                 $("#txtCantidad").focus();
             }
-        } else {
-            alertify.error("La Cantidad No Puede Ser 0");
-            $("#txtCantidad").focus();
-        }
-    });
+        });
 
-    $('#tbl_Detalle tbody').on('click', 'tr', function (e) {
-        tableDetail.$('tr.selected').removeClass('selected');
-        $(this).addClass('selected');
-        if (confirm("Esta Seguro De Quitar Item") === true) {
-            tableDetail.row('.selected').remove().draw(false);
-        } else {
-            $(this).removeClass('selected');
-        }
-        e.stopPropagation();
-    });
-
-    $("#btnGuardar").click(function () {
-
-        if (confirm("Esta Seguro De Guardar") === true) {
-            if (tableDetail.rows().count() !== "0") {
-                guardarPrestamo(tableDetail);
+        $('#tbl_Detalle tbody').on('click', 'tr', function (e) {
+            tableDetail.$('tr.selected').removeClass('selected');
+            $(this).addClass('selected');
+            if (confirm("Esta Seguro De Quitar Item") === true) {
+                tableDetail.row('.selected').remove().draw(false);
             } else {
-                alertify.error("No Existen Item Para Registrar");
+                $(this).removeClass('selected');
             }
-        }
+            e.stopPropagation();
+        });
 
-    });
+        $("#btnGuardar").click(function () {
 
-    $("#btnLimpiar").click(function () {
-        if (confirm("¿Está Seguro De Limpiar Los Campos?")) {
-            limpiarCampos();
-        }
+            if (confirm("Esta Seguro De Guardar") === true) {
+                if (tableDetail.rows().count() !== "0") {
+                    guardarPrestamo(tableDetail);
+                } else {
+                    alertify.error("No Existen Item Para Registrar");
+                }
+            }
+
+        });
+
+        $("#btnLimpiar").click(function () {
+            if (confirm("¿Está Seguro De Limpiar Los Campos?")) {
+                limpiarCampos();
+            }
+        });
+
+    } else {
+        url = "Pagina_No_Autorizada.aspx";
+        $(location).attr('href', url);
+    }
+
+    $("#btnSesion").click(function () {
+        url = "Login_Sistema.aspx";
+        $(location).attr('href', url);
     });
 
 });

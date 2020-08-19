@@ -1,19 +1,35 @@
 ﻿$(document).ready(function () {
-    cargarCodigoDia();
-    $("#btnGuardar").prop("disabled", true);
-    $("#btnLimpiar").prop("disabled", true);
-    $("#btnGuardar").click(function () {
-        if (confirm("Está Seguro De Realizar La Transacción") === true) {
-            devolverLaboratorio();
-        }
-    });
 
-    $("#btnLimpiar").click(function () {
-        if (confirm("¿Está Seguro De Limpiar Los Campos?")) {
-            limpiarCampos();
-            $("#tbl_Prestamos").dataTable().fnClearTable();
-            loadDataTable();
-        }
+    var usuarioRol = localStorage.getItem("usuario");
+    console.log(usuarioRol);
+
+    if (usuarioRol !== "Invitado") {
+
+        cargarCodigoDia();
+        $("#btnGuardar").prop("disabled", true);
+        $("#btnLimpiar").prop("disabled", true);
+        $("#btnGuardar").click(function () {
+            if (confirm("Está Seguro De Realizar La Transacción") === true) {
+                devolverLaboratorio();
+            }
+        });
+
+        $("#btnLimpiar").click(function () {
+            if (confirm("¿Está Seguro De Limpiar Los Campos?")) {
+                limpiarCampos();
+                $("#tbl_Prestamos").dataTable().fnClearTable();
+                loadDataTable();
+            }
+        });
+
+    } else {
+        url = "Pagina_No_Autorizada.aspx";
+        $(location).attr('href', url);
+    }
+
+    $("#btnSesion").click(function () {
+        url = "Login_Sistema.aspx";
+        $(location).attr('href', url);
     });
 
 });
@@ -78,7 +94,7 @@ function cargarCodigoDia() {
 
             alertify.error("Error: " + mensaje);
         },
-        success: function (data) { 
+        success: function (data) {
             cargarTablaDatos(data);
         }
     });

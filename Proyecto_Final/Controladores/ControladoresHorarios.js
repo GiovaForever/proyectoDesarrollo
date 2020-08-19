@@ -1,34 +1,55 @@
 ﻿$(document).ready(function () {
-    var path = "";
-    cargarTablaLaboratorios();
 
-    $('input[type=file]').change(function (event) {
-        var tmppath = URL.createObjectURL(event.target.files[0]);
-        $(".upload-msg").text('Cargando...');
-        path = tmppath;
-    })
+    var usuarioRol = localStorage.getItem("usuario");
+    console.log(usuarioRol);
 
-    $("#btnGuardar").click(function () {
-        if ($("#txtNombre").val() !== "") {
-            if (path !== "") {
-                convertExcelJson(path);
-            } else {
-                alertify.error("Existen Campos Vacios. Verifique, por favor.");
-                $("#customFile").focus();
-            }
+    if (usuarioRol !== "Invitado") {
+
+        if (usuarioRol !== "Admin") {
+            url = "Pagina_No_Autorizada.aspx";
+            $(location).attr('href', url);
         } else {
-            alertify.error("Existen Campos Vacios. Verifique, por favor.");
-            $("#btnBuscarLaboratorista").focus();
+            limpiarCampos();
+            var path = "";
+            cargarTablaLaboratorios();
+
+            $('input[type=file]').change(function (event) {
+                var tmppath = URL.createObjectURL(event.target.files[0]);
+                $(".upload-msg").text('Cargando...');
+                path = tmppath;
+            })
+
+            $("#btnGuardar").click(function () {
+                if ($("#txtNombre").val() !== "") {
+                    if (path !== "") {
+                        convertExcelJson(path);
+                    } else {
+                        alertify.error("Existen Campos Vacios. Verifique, por favor.");
+                        $("#customFile").focus();
+                    }
+                } else {
+                    alertify.error("Existen Campos Vacios. Verifique, por favor.");
+                    $("#btnBuscarLaboratorista").focus();
+                }
+            });
+            //Obtener el archivo xlsx
+            $(".custom-file-input").on("change", function (event) {
+                //Carga en memoria
+                var fileName = $(this).val().split("\\").pop();
+                $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+                //Ruta de acceso web
+                var tmppath = URL.createObjectURL(event.target.files[0]);
+                path = tmppath;
+            });
         }
-    });
-    //Obtener el archivo xlsx
-    $(".custom-file-input").on("change", function (event) {
-        //Carga en memoria
-        var fileName = $(this).val().split("\\").pop();
-        $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
-        //Ruta de acceso web
-        var tmppath = URL.createObjectURL(event.target.files[0]);
-        path = tmppath;
+    } else {
+        url = "Pagina_No_Autorizada.aspx";
+        $(location).attr('href', url);
+    }
+
+    $("#btnSesion").click(function () {
+        url = "Login_Sistema.aspx";
+        $(location).attr('href', url);
     });
 
 });
@@ -188,5 +209,4 @@ function limpiarCampos() {
     $("#txtTipoLaboratorio").val("");
     $("#txtUbicacion").val("");
     $("#btnBuscarLaboratorista").focus();
-    location.reload();
 }
