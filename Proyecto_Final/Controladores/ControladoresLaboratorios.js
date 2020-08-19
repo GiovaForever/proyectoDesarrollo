@@ -1,57 +1,80 @@
 ﻿$(document).ready(function () {
 
-    $("#cmbTipoLaboratorio").change(function () {
-        if ($("#cmbTipoLaboratorio").val() !== "-1") {
-            var tipo = $("#cmbTipoLaboratorio").val();
-            obtenerLaboratorios(tipo);
-        }
-    });
+    var usuarioRol = localStorage.getItem("usuario");
+    console.log(usuarioRol);
 
-    $("#cmbLaboratorio").change(function () {
-        if ($("#cmbLaboratorio").val() !== "-1") {
-            var tipo = $("#cmbLaboratorio").val();
-            $("#txt1").val(tipo);
-        }
-    });
+    if (usuarioRol !== "Invitado") {
 
-    obtenerTipoLaboratorios();
-    configuracionInicial();
-    cargarTablaDatos();
+        $("#btnSesion").val("Cerrar Sesión");
+        $("#btnSesion").removeClass();
+        $("#btnSesion").addClass("btn btn-danger");
 
-    $("#txtNombre").keyup(function () {
-        var cantLetras = $("#txtNombre").val().length;
-        if (cantLetras !== 0) {
-            $("#btnGuardar").prop("disabled", false);
-            $("#btnLimpiar").prop("disabled", false);
+        if (usuarioRol !== "Admin") {
+            url = "Pagina_No_Autorizada.aspx";
+            $(location).attr('href', url);
         } else {
-            $("#btnGuardar").prop("disabled", true);
-            $("#btnLimpiar").prop("disabled", true);
+            $("#cmbTipoLaboratorio").change(function () {
+                if ($("#cmbTipoLaboratorio").val() !== "-1") {
+                    var tipo = $("#cmbTipoLaboratorio").val();
+                    obtenerLaboratorios(tipo);
+                }
+            });
+
+            $("#cmbLaboratorio").change(function () {
+                if ($("#cmbLaboratorio").val() !== "-1") {
+                    var tipo = $("#cmbLaboratorio").val();
+                    $("#txt1").val(tipo);
+                }
+            });
+
+            obtenerTipoLaboratorios();
+            configuracionInicial();
+            cargarTablaDatos();
+
+            $("#txtNombre").keyup(function () {
+                var cantLetras = $("#txtNombre").val().length;
+                if (cantLetras !== 0) {
+                    $("#btnGuardar").prop("disabled", false);
+                    $("#btnLimpiar").prop("disabled", false);
+                } else {
+                    $("#btnGuardar").prop("disabled", true);
+                    $("#btnLimpiar").prop("disabled", true);
+                }
+            });
+
+            $("#btnLimpiar").click(function () {
+                limpiarCampos();
+            });
+
+            $("#btnEliminar").click(function () {
+                if (confirm('¿Esta Seguro De Eliminar?')) {
+                    eliminarLaboratorio();
+                }
+            });
+
+            $("#btnGuardar").click(function () {
+                var actualizar = $("#txtId").prop("disabled");
+
+                if (validarCampos() === true) {
+                    if (actualizar === true) {
+                        actualizarLaboratorio();
+                    } else {
+                        insertarLaboratorio();
+                    }
+                } else {
+                    alertify.error("Existen Campos Vacios. Verifique Por favor.");
+                }
+
+            });
         }
-    });
+    } else {
+        url = "Pagina_No_Autorizada.aspx";
+        $(location).attr('href', url);
+    }
 
-    $("#btnLimpiar").click(function () {
-        limpiarCampos();
-    });
-
-    $("#btnEliminar").click(function () {
-        if (confirm('¿Esta Seguro De Eliminar?')) {
-            eliminarLaboratorio();
-        }
-    });
-
-    $("#btnGuardar").click(function () {
-        var actualizar = $("#txtId").prop("disabled");
-
-        if (validarCampos() === true) {
-            if (actualizar === true) {
-                actualizarLaboratorio();
-            } else {
-                insertarLaboratorio();
-            }
-        } else {
-            alertify.error("Existen Campos Vacios. Verifique Por favor.");
-        }
-
+    $("#btnSesion").click(function () {
+        url = "Login_Sistema.aspx";
+        $(location).attr('href', url);
     });
 
 });

@@ -5,7 +5,7 @@
 
     if (usuarioRol !== "Invitado") {
 
-        $("#btnSesion").val("Cerrar Session");
+        $("#btnSesion").val("Cerrar Sesión");
         $("#btnSesion").removeClass();
         $("#btnSesion").addClass("btn btn-danger");
 

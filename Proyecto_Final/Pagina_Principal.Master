@@ -88,7 +88,7 @@
                         </ul>
                         <form class="form-inline my-2 my-lg-0 container">
                             <input class="form-control mr-sm-2" type="search" placeholder="Search" readonly style="opacity:0;width:175px">
-                            <input type="text" value="Iniciar Sesión" class="btn btn-success" id="btnSesion" style="width: 120px;" readonly/>
+                            <input type="text" value="Iniciar Sesión" class="btn btn-success" id="btnSesion" style="width: 125px;" readonly/>
                         </form>
                     </div>
                 </nav>
