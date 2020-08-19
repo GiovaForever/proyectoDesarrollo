@@ -75,7 +75,21 @@
                                     <a class="dropdown-item" href="Devolucion_Laboratorios_Docentes.aspx">Docentes</a>
                                 </div>
                             </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdownReportes" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Reportes
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownReportes">
+                                    <a class="dropdown-item" href="Devolucion_Prestamo_Estudiante.aspx">Estudiantes</a>
+                                    <a class="dropdown-item" href="Devolucion_Prestamo_Docente.aspx">Docentes</a>
+                                    <a class="dropdown-item" href="Devolucion_Prestamo_Invitado.aspx">Invitados</a>
+                                    <a class="dropdown-item" href="Devolucion_Laboratorios_Docentes.aspx">Docentes</a>
+                                </div>
+                            </li>
                         </ul>
+                        <form class="form-inline my-2 my-lg-0 container">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" readonly style="opacity:0;width:175px">
+                            <input type="text" value="Iniciar Sesión" class="btn btn-success" id="btnSesion" style="width: 120px;" readonly/>
+                        </form>
                     </div>
                 </nav>
                 <section>

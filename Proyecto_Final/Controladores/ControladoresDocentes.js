@@ -1,4 +1,13 @@
 ﻿$(document).ready(function () {
+    var precio = localStorage.getItem("usuario");
+    console.log(precio);
+    if (precio === null || precio === "" ) {
+        url = "Pagina_No_Autorizada.aspx";
+        $(location).attr('href', url);
+    }
+    $("#btnSesion").val("Cerrar Session");
+    $("#btnSesion").removeClass();
+    $("#btnSesion").addClass("btn btn-danger");
 
     configuracionInicial();
     cargarTablaDatos();
@@ -51,6 +60,11 @@
             alertify.error("Existen Campos Vacios. Verifique Por favor.");
         }
 
+    });
+
+    $("#btnSesion").click(function () {
+        url = "Login_Sistema.aspx";
+        $(location).attr('href', url);
     });
 
 });

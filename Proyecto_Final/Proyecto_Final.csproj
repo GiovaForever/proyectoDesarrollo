@@ -133,6 +133,8 @@
     <Content Include="Imagenes\banner.jpeg" />
     <Content Include="Imagenes\fondo_claro.jpg" />
     <Content Include="Index.aspx" />
+    <Content Include="Login_Sistema.aspx" />
+    <Content Include="Pagina_No_Autorizada.aspx" />
     <Content Include="Prestamos_Docentes.aspx" />
     <Content Include="Prestamos_Estudiantes.aspx" />
     <Content Include="Prestamos_Invitados.aspx" />
@@ -347,6 +349,20 @@
     </Compile>
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login_Sistema.aspx.cs">
+      <DependentUpon>Login_Sistema.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login_Sistema.aspx.designer.cs">
+      <DependentUpon>Login_Sistema.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagina_No_Autorizada.aspx.cs">
+      <DependentUpon>Pagina_No_Autorizada.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagina_No_Autorizada.aspx.designer.cs">
+      <DependentUpon>Pagina_No_Autorizada.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pagina_Principal.Master.cs">
       <DependentUpon>Pagina_Principal.Master</DependentUpon>
