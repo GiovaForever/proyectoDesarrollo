@@ -8,6 +8,11 @@
             alertify.error("Error Existen Campos Vacios");
         }
     });
+
+    $("#btnSesion").click(function () {
+        url = "Login_Sistema.aspx";
+        $(location).attr('href', url);
+    });
 });
 
 function registrarNuevoUsuario() {

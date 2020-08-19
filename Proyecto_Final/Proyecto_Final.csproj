@@ -151,6 +151,8 @@
     <Content Include="Devolucion_Prestamo_Invitado.aspx" />
     <Content Include="Estilos\Estilos.css" />
     <Content Include="Estilos\Estilos_Login.css" />
+    <Content Include="Estilos\index.css" />
+    <Content Include="Imagenes\user.png" />
     <Content Include="Reporte_PresEstudiantes.aspx" />
     <Content Include="Reporte_Inventario.aspx" />
     <Content Include="Reporte_Equipos.aspx" />
