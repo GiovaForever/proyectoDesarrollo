@@ -1,5 +1,5 @@
-﻿$(document).ready(function () { 
-     
+﻿$(document).ready(function () {
+
     $("#cmbTipoLaboratorio").change(function () {
         if ($("#cmbTipoLaboratorio").val() !== "-1") {
             var tipo = $("#cmbTipoLaboratorio").val();
@@ -14,6 +14,43 @@
     });
     obtenerCategorias();
     obtenerTipoLaboratorios();
+
+    function obtenerCategorias() {
+        $.ajax({
+            type: "GET",
+            url: "https://localhost:44315/api/Categorias",
+            data: {},
+            contentType: "application/json;charset=utf-8",
+            error: function (xhr, ajaxOptions, ThrownError) {
+
+                if (xhr.status === 404) {
+                    var mensaje = xhr.responseJSON;
+                } else {
+                    mensaje = "Servidor No Disponible. Consulte Soporte."
+                }
+
+                alertify.error("Error: " + mensaje);
+            },
+            success: function (data) {
+                cargarCategorias(data)
+            }
+        });
+    }
+
+    function cargarCategorias(data) {
+        var html_code = '<option value="-1">---Seleccione---</option>';
+        $.each(data, function (key, value) {
+            html_code += '<option value="' + value.idCategoria + '">' + value.nombreCategoria + '</option>';
+        });
+        $("#cmbCategoria").html(html_code);
+    }
+
+    function configuracionInicial() {
+        $("#btnGuardar").prop("disabled", true);
+        $("#btnLimpiar").prop("disabled", true);
+        $("#btnEliminar").prop("disabled", true);
+        $("#txtCedula").focus();
+    }
 
     $("#txtNombre").keyup(function () {
         var cantLetras = $("#txtNombre").val().length;
