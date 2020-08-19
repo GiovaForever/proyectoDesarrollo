@@ -66,5 +66,40 @@ namespace Servicios_Rest.Models
             }
         }
 
+        public Usuario PostUsuario(Usuario usuario)
+        {
+
+            try
+            {
+                Usuario materiaR = new Usuario();
+
+                string sql = @"INSERT INTO Usuarios(nombreCompletoUsuario,correoUsuario,passwordUsuario)
+                                           VALUES(@nombre,@correo,@password);";
+
+                using (SqlConnection connection = new SqlConnection(GetConnectionString()))
+                {
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.AddWithValue("@nombre", usuario.nombreCompletoUsuario);
+                        command.Parameters.AddWithValue("@correo", usuario.correoUsuario);
+                        command.Parameters.AddWithValue("@password", usuario.passwordUsuario);
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                        connection.Close();
+                    }
+                }
+
+                return materiaR;
+
+            }
+            catch (Exception ex)
+            {
+                return new Usuario
+                {
+                    mensajeError = ex.Message
+                };
+            }
+        }
+
     }
 }

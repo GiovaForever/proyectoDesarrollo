@@ -4,6 +4,8 @@
 
     if (usuarioRol !== "Invitado") {
 
+        $("#btnSesion").val("Cerrar Sesión");
+
         if (usuarioRol !== "Admin") {
             url = "Pagina_No_Autorizada.aspx";
             $(location).attr('href', url);

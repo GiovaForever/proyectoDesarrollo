@@ -136,6 +136,7 @@
     <Content Include="Controladores\ControladoresPrestamosDocentes.js" />
     <Content Include="Controladores\ControladoresPrestamosEstudiantes.js" />
     <Content Include="Controladores\ControladoresPrestamosInvitados.js" />
+    <Content Include="Controladores\ControladoresRegistroUsuario.js" />
     <Content Include="Controladores\ControladorEstudiantes.js" />
     <Content Include="Controladores\Controladores_Login.js" />
     <Content Include="Controladores\ControladorLaboratoristas.js" />
