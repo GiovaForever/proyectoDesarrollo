@@ -224,6 +224,7 @@
     <Compile Include="Controllers\PrestamosDocentesController.cs" />
     <Compile Include="Controllers\PrestamosEstudiantesController.cs" />
     <Compile Include="Controllers\PrestamosInvitadosController.cs" />
+    <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Models\DatosDetallePrestamosEst.cs" />
     <Compile Include="Models\DatosPrestamoEstudiante.cs" />
     <Compile Include="Models\DetallePrestamo.cs" />
@@ -276,6 +277,8 @@
     <Compile Include="Models\PrestamoUsuario.cs" />
     <Compile Include="Models\TipoLaboratorio.cs" />
     <Compile Include="Models\TipoLaboratoriosDAL.cs" />
+    <Compile Include="Models\Usuario.cs" />
+    <Compile Include="Models\UsuariosDAL.cs" />
     <Compile Include="Models\valuesDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
