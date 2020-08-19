@@ -143,8 +143,6 @@
     <Content Include="Controladores\ReporteInventarios.js" />
     <Content Include="Controladores\ReportePrestamoDocente.js" />
     <Content Include="Controladores\ReportePrestamoEstudiante.js" />
-    <Content Include="Controladores\ReportePrestamoInvitados.js" />
-    <Content Include="Controladores\ReportePrestamoLaboratorio.js" />
     <Content Include="DataTable\jquery.dataTables.min.css" />
     <Content Include="DataTable\jquery.dataTables.min.js" />
     <Content Include="Devolucion_Laboratorios_Docentes.aspx" />
@@ -153,13 +151,8 @@
     <Content Include="Devolucion_Prestamo_Invitado.aspx" />
     <Content Include="Estilos\Estilos.css" />
     <Content Include="Estilos\Estilos_Login.css" />
-    <Content Include="Imagenes\fac.jpg" />
-    <Content Include="Imagenes\facultad.jpg" />
-    <Content Include="Imagenes\facultad2.jpg" />
-    <Content Include="Imagenes\facultad3.png" />
-    <Content Include="Reporte_PresLaboratorios.aspx" />
-    <Content Include="Reporte_PresInvitados.aspx" />
-    <Content Include="Reporte_PresDocentes.aspx" />
+    <Content Include="Estilos\index.css" />
+    <Content Include="Imagenes\user.png" />
     <Content Include="Reporte_PresEstudiantes.aspx" />
     <Content Include="Reporte_Inventario.aspx" />
     <Content Include="Reporte_Equipos.aspx" />
@@ -366,27 +359,6 @@
     <Compile Include="Devolucion_Prestamo_Invitado.aspx.designer.cs">
       <DependentUpon>Devolucion_Prestamo_Invitado.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Reporte_PresLaboratorios.aspx.cs">
-      <DependentUpon>Reporte_PresLaboratorios.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Reporte_PresLaboratorios.aspx.designer.cs">
-      <DependentUpon>Reporte_PresLaboratorios.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Reporte_PresInvitados.aspx.cs">
-      <DependentUpon>Reporte_PresInvitados.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Reporte_PresInvitados.aspx.designer.cs">
-      <DependentUpon>Reporte_PresInvitados.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Reporte_PresDocentes.aspx.cs">
-      <DependentUpon>Reporte_PresDocentes.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Reporte_PresDocentes.aspx.designer.cs">
-      <DependentUpon>Reporte_PresDocentes.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Reporte_PresEstudiantes.aspx.cs">
       <DependentUpon>Reporte_PresEstudiantes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -553,8 +525,6 @@
     <EmbeddedResource Include="ReporteInventario.rdlc" />
     <EmbeddedResource Include="ReporteInventarioCategoria.rdlc" />
     <EmbeddedResource Include="ReporteMaterias.rdlc" />
-    <EmbeddedResource Include="ReportePrestamoInvitados.rdlc" />
-    <EmbeddedResource Include="ReportePrestamosDocentes.rdlc" />
     <EmbeddedResource Include="ReportePrestamosEstudiantes.rdlc" />
   </ItemGroup>
   <PropertyGroup>
