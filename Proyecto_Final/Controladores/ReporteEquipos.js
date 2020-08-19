@@ -1,5 +1,5 @@
-﻿$(document).ready(function () {
-
+﻿$(document).ready(function () { 
+     
     $("#cmbTipoLaboratorio").change(function () {
         if ($("#cmbTipoLaboratorio").val() !== "-1") {
             var tipo = $("#cmbTipoLaboratorio").val();

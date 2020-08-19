@@ -1,4 +1,4 @@
-﻿$(document).ready(function () {
+﻿$(document).ready(function () { 
     $("#cmbCategoria").change(function () {
         if ($("#cmbCategoria").val() !== "-1") {
             var tipo = $("#cmbCategoria").val();
