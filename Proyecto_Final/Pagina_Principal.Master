@@ -93,8 +93,9 @@
                                     <a class="dropdown-item" href="Reporte_Inventario.aspx">Inventarios</a>
                                     <a class="divider"></a><a class="dropdown-header ">Prestamos</a>
                                     <a class="dropdown-item" href="Reporte_PresEstudiantes.aspx">Estudiantes</a>
-                                    <a class="dropdown-item" href="Reporte_PresEstudiantes.aspx">Docentes</a>
-                                    <a class="dropdown-item" href="Reporte_PresEstudiantes.aspx">Invitados</a>
+                                    <a class="dropdown-item" href="Reporte_PresDocentes.aspx">Docentes</a>
+                                    <a class="dropdown-item" href="Reporte_PresInvitados.aspx">Invitados</a>
+                                      <a class="dropdown-item" href="Reporte_PresLaboratorios.aspx">Laboratorios</a>
                                 </div>
                             </li>
                         </ul>

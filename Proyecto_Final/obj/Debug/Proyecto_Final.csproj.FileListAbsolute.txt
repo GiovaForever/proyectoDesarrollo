@@ -191,6 +191,7 @@ E:\Universidad\Octavo\Desarrollo_IV\Proyecto_Final\proyectoDesarrollo\Proyecto_F
 E:\Universidad\Octavo\Desarrollo_IV\Proyecto_Final\proyectoDesarrollo\Proyecto_Final\obj\Debug\Proyecto_Final.dll
 E:\Universidad\Octavo\Desarrollo_IV\Proyecto_Final\proyectoDesarrollo\Proyecto_Final\obj\Debug\Proyecto_Final.pdb
 E:\Universidad\Octavo\Desarrollo_IV\Proyecto_Final\proyectoDesarrollo\Proyecto_Final\obj\Debug\Proyecto_Final.csprojAssemblyReference.cache
+C:\Users\LENOVO\Documents\GitHub\proyectoDesarrollo\Proyecto_Final\bin\Microsoft.VisualStudio.Shell.Interop.dll
 C:\Users\LENOVO\Documents\GitHub\proyectoDesarrollo\Proyecto_Final\bin\SqlServerTypes\x64\msvcr120.dll
 C:\Users\LENOVO\Documents\GitHub\proyectoDesarrollo\Proyecto_Final\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
 C:\Users\LENOVO\Documents\GitHub\proyectoDesarrollo\Proyecto_Final\bin\SqlServerTypes\x86\msvcr120.dll
@@ -253,7 +254,6 @@ C:\Users\LENOVO\Documents\GitHub\proyectoDesarrollo\Proyecto_Final\bin\Microsoft
 C:\Users\LENOVO\Documents\GitHub\proyectoDesarrollo\Proyecto_Final\bin\Microsoft.ReportViewer.WebForms.dll
 C:\Users\LENOVO\Documents\GitHub\proyectoDesarrollo\Proyecto_Final\bin\Microsoft.SqlServer.Types.dll
 C:\Users\LENOVO\Documents\GitHub\proyectoDesarrollo\Proyecto_Final\bin\EnvDTE.dll
-C:\Users\LENOVO\Documents\GitHub\proyectoDesarrollo\Proyecto_Final\bin\Microsoft.VisualStudio.Shell.Interop.dll
 C:\Users\LENOVO\Documents\GitHub\proyectoDesarrollo\Proyecto_Final\bin\Microsoft.ReportViewer.WinForms.dll
 C:\Users\LENOVO\Documents\GitHub\proyectoDesarrollo\Proyecto_Final\bin\Microsoft.VisualStudio.Shell.Interop.8.0.dll
 C:\Users\LENOVO\Documents\GitHub\proyectoDesarrollo\Proyecto_Final\bin\stdole.dll
@@ -328,3 +328,4 @@ C:\Users\LENOVO\Documents\GitHub\proyectoDesarrollo\Proyecto_Final\obj\Debug\Pro
 C:\Users\LENOVO\Documents\GitHub\proyectoDesarrollo\Proyecto_Final\obj\Debug\Proyecto_Final.csproj.CopyComplete
 C:\Users\LENOVO\Documents\GitHub\proyectoDesarrollo\Proyecto_Final\obj\Debug\Proyecto_Final.dll
 C:\Users\LENOVO\Documents\GitHub\proyectoDesarrollo\Proyecto_Final\obj\Debug\Proyecto_Final.pdb
+C:\Users\LENOVO\Documents\GitHub\proyectoDesarrollo\Proyecto_Final\obj\Debug\Proyecto_Final.csprojAssemblyReference.cache

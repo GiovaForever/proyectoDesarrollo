@@ -27,7 +27,7 @@ namespace Proyecto_Final
             ReportViewerPrestamosEstudiantes.LocalReport.DataSources.Clear();
             ReportViewerPrestamosEstudiantes.LocalReport.DataSources.Add(rs);
             ReportViewerPrestamosEstudiantes.ProcessingMode = ProcessingMode.Local;
-            ReportViewerPrestamosEstudiantes.LocalReport.ReportPath = "ReportePrestamosEstudiantes.rdlc";
+            ReportViewerPrestamosEstudiantes.LocalReport.ReportPath = "ReportePrestamosDocentes.rdlc";
             ReportViewerPrestamosEstudiantes.LocalReport.Refresh();
         }
     }

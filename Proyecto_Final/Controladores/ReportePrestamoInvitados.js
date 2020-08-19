@@ -1,17 +1,19 @@
 ﻿$(document).ready(function () {
+
     cargarTablaPrestamos();
+
 });
 
 function limpiarCampos() {
     $("#txtNumeroPrestamo").val("");
     $("#txtFecha").val("");
-    $("#txtCedulaDocente").val("");
-    $("#txtDatosDocente").val("");
+    $("#txtCedulaInvitado").val("");
+    $("#txtDatosInvitado").val("");
     $("#txtCedulaLaboratorista").val("");
     $("#txtDatosLaboratorista").val("");
-    $("#tbl_Detalle").dataTable().fnClearTable();
     $("#btnGuardar").prop("disabled", true);
     $("#btnLimpiar").prop("disabled", true);
+    $("#tbl_Detalle").dataTable().fnClearTable();
     loadTablePrestamos();
 }
 
@@ -27,8 +29,8 @@ function cargarTablaPrestamos() {
         table.search('').draw();
         $("#txtNumeroPrestamo").val(datosTabla[0]);
         $("#txtFecha").val(datosTabla[1]);
-        $("#txtCedulaDocente").val(datosTabla[2]);
-        $("#txtDatosDocente").val(datosTabla[3]);
+        $("#txtCedulaInvitado").val(datosTabla[2]);
+        $("#txtDatosInvitado").val(datosTabla[3]);
         $("#txtCedulaLaboratorista").val(datosTabla[4]);
         $("#txtDatosLaboratorista").val(datosTabla[5]);
         $("#tbl_Detalle").dataTable().fnClearTable();
@@ -43,7 +45,7 @@ function loadTablePrestamos() {
     $("#tbl_Prestamos").dataTable().fnClearTable();
     $.ajax({
         type: "GET",
-        url: "https://localhost:44315/api/PrestamosDocentes",
+        url: "https://localhost:44315/api/PrestamosInvitados",
         data: {},
         contentType: "application/json;charset=utf-8",
         error: function (xhr, ajaxOptions, ThrownError) {
@@ -87,7 +89,7 @@ function addRowPrestamos(data) {
 function loadTableDetalle() {
     $.ajax({
         type: "GET",
-        url: "https://localhost:44315/api/PrestamosDocentes/DetallePrestamos?idPrestamo=" + $("#txtNumeroPrestamo").val(),
+        url: "https://localhost:44315/api/PrestamosInvitados/DetallePrestamos?idPrestamo=" + $("#txtNumeroPrestamo").val(),
         data: {},
         contentType: "application/json;charset=utf-8",
         error: function (xhr, ajaxOptions, ThrownError) {
@@ -101,6 +103,7 @@ function loadTableDetalle() {
             alertify.error("Error: " + mensaje);
         },
         success: function (data) {
+            console.log(data);
             addRowDetalle(data);
         }
     });
@@ -124,39 +127,7 @@ function addRowDetalle(data) {
     }
 }
 
-//Actualizar Estado
-function guardarPrestamo(tableDetail) {
-    var numPrestamo = $("#txtNumeroPrestamo").val();
-    var fechaPrestamo = $("#txtFecha").val();
-    var cedulaUsuario = $("#txtCedulaDocente").val();
-    var cedulaLaboratorista = $("#txtCedulaLaboratorista").val();
-    var detail = obtenerDataDetalle(tableDetail);
-    var dataComplete = "{'idPrestamo':'" + numPrestamo + "','cedulaUsuario':'" + cedulaUsuario + "','cedulaLaboratorista':'" +
-        cedulaLaboratorista + "','fechaPrestamo':'" + fechaPrestamo + "','estadoPrestamo':'1','lstDetalle':" + detail + "}";
-    $.ajax({
-        type: "PUT",
-        url: "https://localhost:44315/api/PrestamosDocentes",
-        data: dataComplete,
-        contentType: "application/json;charset=utf-8",
-        error: function (xhr, ajaxOptions, ThrownError) {
 
-            var mensaje = "";
-
-            if (xhr.status === 404) {
-                mensaje = xhr.responseJSON;
-            } else {
-                mensaje = "Servidor No Disponible. Consulte Soporte."
-            }
-
-            alertify.error("Error: " + mensaje);
-
-        },
-        success: function (data) {
-            alertify.success("Devolución Registrada Correctamente");
-            limpiarCampos(tableDetail);
-        }
-    });
-}
 
 function obtenerDataDetalle(tableDetail) {
 
