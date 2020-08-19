@@ -7,16 +7,7 @@
     <script src="Scripts/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link rel="stylesheet" href="Estilos/Estilos_Login.css">
-    <script type="text/javascript">
-        $(document).ready(function () {
-            var precio = localStorage.getItem("usuario");
-            if (precio === "" || precio === null) {
-                localStorage.setItem("usuario", "otros");
-            } else {
-                localStorage.setItem("usuario", "");
-            }
-        });
-    </script>
+    <script src="Controladores/Controladores_Login.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="formulario">
@@ -24,14 +15,14 @@
         <div class="contenedor">
             <div class="input-contenedor">
                 <i class="fas fa-envelope icon"></i>
-                <input type="text" placeholder="Correo Electronico" class="estiloText">
+                <input type="text" placeholder="Correo Electronico" class="estiloText" id="txtCorreo">
             </div>
             <div class="input-contenedor">
                 <i class="fas fa-key icon"></i>
-                <input type="password" placeholder="Contraseña" class="estiloText">
+                <input type="password" placeholder="Contraseña" class="estiloText" id="txtContrasenia">
             </div>
-            <input type="submit" value="Login" class="button my-3">
-            <p>¿No tienes una cuenta? <a class="link" href="Registro_Usuario.aspx"> Registrate </a></p>
+            <input type="button" value="Login" class="button my-3" id="btnIngresar" onclick="return false;">
+            <p>¿No tienes una cuenta? <a class="link" href="Registro_Usuario.aspx">Registrate </a></p>
         </div>
     </div>
 </asp:Content>

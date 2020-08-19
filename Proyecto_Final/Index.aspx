@@ -7,9 +7,12 @@
     <script src="Scripts/bootstrap.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            var precio = localStorage.getItem("usuario");
-            if (precio === "" || precio === null) {
-                localStorage.setItem("usuario", "");
+            var usuarioRol = localStorage.getItem("usuario");
+            console.log(usuarioRol);
+            if (usuarioRol !== "Invitado") {
+                $("#btnSesion").val("Cerrar Session");
+                $("#btnSesion").removeClass();
+                $("#btnSesion").addClass("btn btn-danger");
             }
             $("#btnSesion").click(function () {
                 url = "Login_Sistema.aspx";

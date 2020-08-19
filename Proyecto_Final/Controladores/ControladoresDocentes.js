@@ -1,66 +1,76 @@
 ﻿$(document).ready(function () {
-    var precio = localStorage.getItem("usuario");
-    console.log(precio);
-    if (precio === null || precio === "" ) {
+    var usuarioRol = localStorage.getItem("usuario");
+    console.log(usuarioRol);
+
+    if (usuarioRol !== "Invitado") {
+
+        $("#btnSesion").val("Cerrar Session");
+        $("#btnSesion").removeClass();
+        $("#btnSesion").addClass("btn btn-danger");
+
+        if (usuarioRol !== "Admin") {
+            url = "Pagina_No_Autorizada.aspx";
+            $(location).attr('href', url);
+        } else {
+            configuracionInicial();
+            cargarTablaDatos();
+
+            $("#txtCedula").keyup(function () {
+                var cantLetras = $("#txtCedula").val().length;
+                if (cantLetras !== 0) {
+                    $("#btnGuardar").prop("disabled", false);
+                    $("#btnLimpiar").prop("disabled", false);
+                } else {
+                    $("#btnGuardar").prop("disabled", true);
+                    $("#btnLimpiar").prop("disabled", true);
+                }
+            });
+
+            $("#txtCedula").blur(function () {
+                var cantLetras = $("#txtCedula").val().length;
+                if (cantLetras < 10) {
+                    $("#btnGuardar").prop("disabled", true);
+                    $("#btnLimpiar").prop("disabled", true);
+                } else {
+                    var result = verificarCedula($("#txtCedula").val());
+                    if (result == false) {
+                        alertify.error("Número De Cédula Erróneo");
+                        $('#txtCedula').focus();
+                    }
+                }
+            });
+
+            $("#btnLimpiar").click(function () {
+                limpiarCampos();
+            });
+
+            $("#btnEliminar").click(function () {
+                if (confirm('¿Esta Seguro De Eliminar?')) {
+                    eliminarDocente();
+                }
+            });
+
+            $("#btnGuardar").click(function () {
+                var actualizar = $("#txtCedula").prop("disabled");
+
+                if (ValidarCampos() === true) {
+                    if (actualizar === true) {
+                        actualizarDocente();
+                    } else {
+                        insertarDocente();
+                    }
+                } else {
+                    alertify.error("Existen Campos Vacios. Verifique Por favor.");
+                }
+
+            });
+        }
+    } else {
         url = "Pagina_No_Autorizada.aspx";
         $(location).attr('href', url);
     }
-    $("#btnSesion").val("Cerrar Session");
-    $("#btnSesion").removeClass();
-    $("#btnSesion").addClass("btn btn-danger");
 
-    configuracionInicial();
-    cargarTablaDatos();
 
-    $("#txtCedula").keyup(function () {
-        var cantLetras = $("#txtCedula").val().length;
-        if (cantLetras !== 0) {
-            $("#btnGuardar").prop("disabled", false);
-            $("#btnLimpiar").prop("disabled", false);
-        } else {
-            $("#btnGuardar").prop("disabled", true);
-            $("#btnLimpiar").prop("disabled", true);
-        }
-    });
-
-    $("#txtCedula").blur(function () {
-        var cantLetras = $("#txtCedula").val().length;
-        if (cantLetras < 10) {
-            $("#btnGuardar").prop("disabled", true);
-            $("#btnLimpiar").prop("disabled", true);
-        } else {
-            var result = verificarCedula($("#txtCedula").val());
-            if (result == false) {
-                alertify.error("Número De Cédula Erróneo");
-                $('#txtCedula').focus();
-            }
-        }
-    });
-
-    $("#btnLimpiar").click(function () {
-        limpiarCampos();
-    });
-
-    $("#btnEliminar").click(function () {
-        if (confirm('¿Esta Seguro De Eliminar?')) {
-            eliminarDocente();
-        }
-    });
-
-    $("#btnGuardar").click(function () {
-        var actualizar = $("#txtCedula").prop("disabled");
-
-        if (ValidarCampos() === true) {
-            if (actualizar === true) {
-                actualizarDocente();
-            } else {
-                insertarDocente();
-            }
-        } else {
-            alertify.error("Existen Campos Vacios. Verifique Por favor.");
-        }
-
-    });
 
     $("#btnSesion").click(function () {
         url = "Login_Sistema.aspx";
