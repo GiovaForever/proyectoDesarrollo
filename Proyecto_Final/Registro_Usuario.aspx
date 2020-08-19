@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link rel="stylesheet" href="Estilos/Estilos_Login.css">
+    <script src="Controladores/ControladoresRegistroUsuario.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="formulario">
@@ -15,19 +16,19 @@
         <div class="contenedor">
             <div class="input-contenedor">
                 <i class="fas fa-user icon"></i>
-                <input type="text" placeholder="Nombre Completo" class="estiloText">
+                <input type="text" placeholder="Nombre Completo" class="estiloText" onkeypress="isLetter(event)" id="txtNombreCompleto">
             </div>
 
             <div class="input-contenedor">
                 <i class="fas fa-envelope icon"></i>
-                <input type="text" placeholder="Correo Electronico" class="estiloText">
+                <input type="text" placeholder="Correo Electronico" class="estiloText" id="txtCorreo">
             </div>
 
             <div class="input-contenedor">
                 <i class="fas fa-key icon"></i>
-                <input type="password" placeholder="Contraseña" class="estiloText">
+                <input type="password" placeholder="Contraseña" class="estiloText" id="txtContrasenia">
             </div>
-            <input type="submit" value="Registrate" class="button my-2" onclick="return false;">
+            <input type="button" value="Registrate" class="button my-2" onclick="return false;" id="btnRegistrar">
             <p>¿Ya tienes una cuenta? <a class="link" href="Login_Sistema.aspx">Iniciar Sesion</a></p>
         </div>
     </div>

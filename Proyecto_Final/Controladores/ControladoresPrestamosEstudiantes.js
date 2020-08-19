@@ -5,6 +5,8 @@
 
     if (usuarioRol !== "Invitado") {
 
+        $("#btnSesion").val("Cerrar Sesión");
+
         cargarLaboratoristas();
         cargarEstudiantes();
         cargarInventario();

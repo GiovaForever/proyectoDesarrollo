@@ -13,13 +13,13 @@
         }
     </style>
     <script type="text/javascript">
+        var usuarioRol = localStorage.getItem("usuario");
+        console.log(usuarioRol);
         $(document).ready(function () {
             var usuarioRol = localStorage.getItem("usuario");
             console.log(usuarioRol);
             if (usuarioRol !== "Invitado") {
                 $("#btnSesion").val("Cerrar Sesión");
-                $("#btnSesion").removeClass();
-                $("#btnSesion").addClass("btn btn-danger");
             }
             $("#btnSesion").click(function () {
                 url = "Login_Sistema.aspx";

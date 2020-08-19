@@ -38,5 +38,21 @@ namespace Servicios_Rest.Controllers
 
         }
 
+        public IHttpActionResult PostUsuarios(Usuario usuario)
+        {
+
+            Usuario usuarioR = usuarios.PostUsuario(usuario);
+
+            if (!String.IsNullOrEmpty(usuarioR.mensajeError))
+            {
+                return Content(HttpStatusCode.NotFound, usuarioR.mensajeError);
+            }
+            else
+            {
+                return Content(HttpStatusCode.OK, usuarioR);
+            }
+
+        }
+
     }
 }
