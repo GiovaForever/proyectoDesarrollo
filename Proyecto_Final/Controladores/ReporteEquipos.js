@@ -6,7 +6,6 @@
             obtenerLaboratorios(tipo);
         }
     });
-
     $("#cmbLaboratorio").change(function () {
         if ($("#cmbLaboratorio").val() !== "-1") {
             var tipo = $("#cmbLaboratorio").val();
