@@ -9,7 +9,7 @@ function limpiarCampos() {
 function loadDataTable(data) {
     $.ajax({
         type: "GET",
-        url: "https://localhost:44315/api/LaboratoriosDocentes/laboratoriosOcupados?idDia=" + data,
+        url: "https://localhost:44315/api/LaboratoriosDocentes",
         data: {},
         contentType: "application/json;charset=utf-8",
         error: function (xhr, ajaxOptions, ThrownError) {
@@ -44,6 +44,7 @@ function cargarTablaDatos(data) {
         $(this).removeClass('selected');
         table.search('').draw();
         $("#txtCodigo").val(datosTabla[0]);
+        $("#ModalPrestamos").modal('toggle');
     });
 
 }

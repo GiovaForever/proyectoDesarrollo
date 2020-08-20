@@ -143,6 +143,7 @@
     <Content Include="Controladores\ReporteInventarios.js" />
     <Content Include="Controladores\ReportePrestamoDocente.js" />
     <Content Include="Controladores\ReportePrestamoEstudiante.js" />
+    <Content Include="Controladores\ReportePrestamoLaboratorio.js" />
     <Content Include="DataTable\jquery.dataTables.min.css" />
     <Content Include="DataTable\jquery.dataTables.min.js" />
     <Content Include="Devolucion_Laboratorios_Docentes.aspx" />
@@ -152,6 +153,7 @@
     <Content Include="Estilos\Estilos.css" />
     <Content Include="Estilos\Estilos_Login.css" />
     <Content Include="Estilos\index.css" />
+    <Content Include="ReporteLaboratorioD.aspx" />
     <Content Include="Imagenes\user.png" />
     <Content Include="Reporte_PresEstudiantes.aspx" />
     <Content Include="Reporte_Inventario.aspx" />
@@ -359,6 +361,13 @@
     <Compile Include="Devolucion_Prestamo_Invitado.aspx.designer.cs">
       <DependentUpon>Devolucion_Prestamo_Invitado.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ReporteLaboratorioD.aspx.cs">
+      <DependentUpon>ReporteLaboratorioD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReporteLaboratorioD.aspx.designer.cs">
+      <DependentUpon>ReporteLaboratorioD.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Reporte_PresEstudiantes.aspx.cs">
       <DependentUpon>Reporte_PresEstudiantes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -524,6 +533,7 @@
     <EmbeddedResource Include="ReporteEquipos.rdlc" />
     <EmbeddedResource Include="ReporteInventario.rdlc" />
     <EmbeddedResource Include="ReporteInventarioCategoria.rdlc" />
+    <EmbeddedResource Include="ReporteLab.rdlc" />
     <EmbeddedResource Include="ReporteMaterias.rdlc" />
     <EmbeddedResource Include="ReportePrestamosEstudiantes.rdlc" />
   </ItemGroup>
