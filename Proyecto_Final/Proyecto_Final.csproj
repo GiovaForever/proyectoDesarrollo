@@ -153,6 +153,7 @@
     <Content Include="Estilos\Estilos_Login.css" />
     <Content Include="Estilos\index.css" />
     <Content Include="Imagenes\user.png" />
+    <Content Include="ReporteLaboratorioD.aspx" />
     <Content Include="Reporte_PresDocentes.aspx" />
     <Content Include="Reporte_PresEstudiantes.aspx" />
     <Content Include="Reporte_Inventario.aspx" />
@@ -360,6 +361,13 @@
     </Compile>
     <Compile Include="Devolucion_Prestamo_Invitado.aspx.designer.cs">
       <DependentUpon>Devolucion_Prestamo_Invitado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteLaboratorioD.aspx.cs">
+      <DependentUpon>ReporteLaboratorioD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReporteLaboratorioD.aspx.designer.cs">
+      <DependentUpon>ReporteLaboratorioD.aspx</DependentUpon>
     </Compile>
     <Compile Include="Reporte_PresDocentes.aspx.cs">
       <DependentUpon>Reporte_PresDocentes.aspx</DependentUpon>
